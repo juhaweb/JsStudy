@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel= "stylesheet" type="text/css" href="../ch05/css/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script>
+  
+  $(document).ready(function(){
+
+      $('.box1').click(function(){
+        $(this).css('background','SpringGreen');
+      });
+
+      $('.box2').mousedown(function(){
+        $(this).css('background','salmon');
+      });
+
+      $('.box3').mouseup(function(){
+        $(this).css('background','LightSteelBlue');
+      });
+      
+      $('.box4').mouseover(function(){
+        $(this).css('background','LimeGreen');
+      });
+      
+      $('.box5').mouseout(function(){
+        $(this).css('background','MidnightBlue');
+      });
+
+      $('.box6').hover(function(){
+        // mouseover
+        $(this).text('마우스옴').css('background','MediumTurquoise ');
+      },function(){
+        // mouseout
+        $(this).text('마우스나감').css('background','green');
+      });
+
+      $('.box7').mousemove(function(){
+        console.log('mousemove!!!');
+      });
+
+  });
+  
+  
+  
+  </script>
+  <title>5-2. jQuery 기본 이벤트 함수 </title>
+</head>
+<body>
+    <h1>5-2. jQuery 기본 이벤트 함수 </h1>
+    <hr>
+
+    <div class="box box1">click</div>
+    <div class="box box2">mousedown</div>
+    <div class="box box3">mouseup</div>
+    <div class="box box4">mouseover</div>
+    <div class="box box5">mouseout</div>
+    <div class="box box6">hover</div>
+    <div class="box box7">mousemove</div>
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <title>5-4. jQuery 윈도우(브라우저) 이벤트</title>
+  <style>
+  html{width:100%; height:3000px; border:4px solid salmon; box-sizing: border-box;}
+  .s{position:fixed; right:10px; top:10px;}
+  button{position:fixed; right:10px; bottom:10px;}
+  </style>
+  <script>
+    
+    
+    $(document).ready(function(){
+      
+      // 브라우저 리사이즈 확인
+      $(window).resize(function(){
+        var w = $(this).width();
+        var h = $(this).height();
+        $('.w > span').text(w);
+        $('.h > span').text(h);
+      });
+
+      // 윈도우 스크롤 이벤트
+      $(window).scroll(function(){
+        var t = $(this).scrollTop();
+        $('.s > span').text(t);
+
+      });
+
+      // 윈도우 시작이동 이벤트
+      $('button').click(function(){
+        $(window).scrollTop(0);
+      });
+
+
+
+    });
+  </script>
+</head>
+<body>
+  <h1>5-4. jQuery 윈도우(브라우저) 이벤트</h1>
+  <h4 class="w"> 가로 : <span>0</span></h4>
+  <h4 class="h"> 세로 : <span>0</span></h4>
+  <h4 class="s"> 스크롤바 위치 : <span>0</span></h4>
+
+  <button>위로 이동</button>
+</body>
+</html>

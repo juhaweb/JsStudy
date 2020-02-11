@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+  
+
+// 내장객체 - Date
+    var date = new Date();
+    var y = date.getFullYear();
+    var m = date.getMonth()+1;
+    var d = date.getDate();
+
+    var hour = date.getHours();
+    var min = date.getMinutes();
+    var sec = date.getSeconds();
+
+    var msg = "<hr>오늘날짜 : " +y+"년, "+m+"월, " +d+"일 <br>";
+        msg += "현재시간 : "+hour+ ":" +min+ ":" +sec+ "<br>";
+
+        document.write(msg);
+
+
+
+    // 내장객체 - Math
+    var r1 = Math.abs(-5);
+    var r2 = Math.ceil(1.1);
+    var r3 = Math.floor(1.9);
+    var r4 = Math.round(-1.4);
+    var r5 = Math.round(1.9);
+
+    document.write("절대값 : "+r1+"<br>");
+    document.write("올림 : "+r2+"<br>");
+    document.write("내림 : "+r3+"<br>");
+    document.write("반올림 : "+r4+"<br>");
+    document.write("반올림 : "+r5+"<br>");
+
+    var num1 = Math.random();
+    var num2 = num1 * 10;
+    var num3 = Math.ceil(num2);
+    document.write("1부터 10 사이의 임의의 정수 : "+num3+"<br>");
+
+    var result = Math.ceil(Math.random()*45);
+    document.write("1부터 10 사이의 임의의 정수 : "+result+"<br>");
+
+
+
+
+    // 내장객체 - String
+    var str1 = new String("Hello Korea");
+    var str2 = "Hello Korea";
+
+    var s1 = str2.charAt(0);
+    var s2 = str2.length;
+    var s3 = str2.indexOf("e");
+    var s4 = str2.lastIndexOf("e");
+    var s5 = str2.replace("Korea","Busan");
+    var s6 = str2.substring(1,5);  // 1에서 5까지
+
+    document.write(s1+"<br>");
+    document.write(s2+"<br>");
+    document.write(s3+"<br>");
+    document.write(s4+"<br>");
+    document.write(s5+"<br>");
+    document.write(s6+"<br>");
+
+
+    
+  </script>
+</body>
+</html>

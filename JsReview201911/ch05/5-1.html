@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel= "stylesheet" type="text/css" href="../ch04/css/style42.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function(){
+
+      $('.box1').on('click',function(){
+        $(this).css('background','Teal ');
+      });
+
+      $('.box2').on({
+        'mouseover':function(){
+          $(this).css('background','SpringGreen ');
+        },
+        'mouseout':function(){
+          $(this).css('background','turquoise');
+        }
+      });
+
+      $('.box3').on({
+        'mousedown':function(){
+          $(this).css('background','LightSalmon ');
+        },
+        'mouseup':function(){
+          $(this).css('background','LightSeaGreen ');
+        },
+        'mousemove':function(){
+          console.log('mousemove!!!');
+        }
+      });
+
+      
+
+
+
+
+
+
+
+
+    });
+  
+  
+  
+  
+  </script>
+  <title>5-1. jquery 이벤트 함수 </title>
+</head>
+<body>
+
+  <h1>jquery 이벤트 함수 </h1>
+  <hr>
+
+  <div class="box box1"> box1 </div>
+  <div class="box box2"> box2 </div>
+  <div class="box box3"> box3 </div>
+
+  
+</body>
+</html>

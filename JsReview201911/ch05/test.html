@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 60px;
+            display:inline-block;
+            transition:  1s;
+        }
+
+        .to-center{
+        background: 
+            linear-gradient(black,black) no-repeat,
+            red;
+        background-size: 100% 100%;
+        background-position:center;
+        }
+
+        .to-center:hover {
+        background-size: 0% 100%; /* Or 100% 0% */
+        }
+
+        .from-center{
+        background: 
+            linear-gradient(red,red) no-repeat,
+            black;
+        background-size: 0% 100%;  /* Or 100% 0% */
+        background-position:center;
+        }
+
+        .from-center:hover {
+        background-size: 100% 100%;
+        }
+
+        .diagonal-right{
+        background-image:linear-gradient(to bottom right,red 49.5%,black 50%);
+        background-size: 200% 200%;
+        background-position:bottom right;
+        }
+
+        .diagonal-right:hover {
+        background-position:top left;
+        }
+
+        .diagonal-left{
+            background-image:linear-gradient(to top right,#5e2a77 50%,#ffffff 50%);
+            background-size: 200% 200%;
+            background-position:top right;
+        }
+
+        .diagonal-left:hover {
+            background-position:bottom left;
+        }
+    
+    </style>
+</head>
+<body>
+        <div class="box to-center"></div>
+
+        <div class="box from-center"></div>
+        
+        <div class="box diagonal-right"></div>
+        
+        
+        <div class="box diagonal-left"></div>
+    
+    
+</body>
+</html>

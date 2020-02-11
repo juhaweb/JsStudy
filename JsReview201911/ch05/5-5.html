@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <title>5-4. jQuery 이벤트 연습문제</title>
+  <style>
+  .box {position: absolute; left:10px; top:100px; width:100px; height:100px; border:4px solid salmon; box-sizing: border-box;background-color:lightsteelblue;}
+  
+  </style>
+  <script>
+        
+    $(window).ready(function(){
+
+      var box = $('.box');
+      var draggable = false;
+
+      box.mousedown(function(){
+          draggable = true;
+      });
+      $(document).mousemove(function(e){
+          if(draggable){
+            box.css({
+            'left' : e.pageX,
+            'top' : e.pageY
+            });
+          }
+      });
+      box.mouseup(function(){
+          draggable = false;
+      });
+    
+
+
+    });
+  </script>
+</head>
+<body>
+  <h1>5-4. jQuery 이벤트 연습문제</h1>
+  <div class="box">box</div>
+</body>
+</html>

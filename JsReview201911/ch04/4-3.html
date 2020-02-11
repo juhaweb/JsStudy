@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <title>4-3.jQuery style 함수</title>
+  <link rel= "stylesheet" type="text/css" href="./css/style42.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script>
+    
+$(document).ready(function(){
+  
+  $('.box1').css('width','100px').css('height','100px').css('background','LightSeaGreen ').css('border','4px solid lightslateGray').css('box-sizing','border-box');
+  
+  //json format
+  $('.box2').css({
+    'width':'100px',
+    'height':'100px',
+    'background':'LightSeaGreen',
+    'border':'4px solid lightblue',
+    'box-sizing':'border-box'
+  });
+
+});
+
+
+  </script>
+</head>
+<body>
+  
+  <h3>4-3. jQuery Style 함수</h3>
+  <div class="box1">box1</div>
+  <div class="box2">box2</div>
+
+</body>
+</html>

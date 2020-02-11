@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>6-3</title>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <style>
+        
+        .box {
+            position: relative;
+            width: 800px;
+            height: 500px;
+            border: 1px solid black;
+        }
+
+        .box > div {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+            background: orange;
+            box-sizing: border-box;
+        }
+        .box > div:nth-child(1) {left: 0; top:  10px;}
+        .box > div:nth-child(2) {left: 0; top: 120px;}
+        .box > div:nth-child(3) {left: 0; top: 230px;}
+        .box > div:nth-child(4) {left: 0; top: 340px;}
+
+
+    </style>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>    
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+    <script>
+        $(function(){
+
+            var box = $('.box > div');
+
+            box.eq(0).click(function(){
+
+                $(this).animate({   
+                    'top':'10px',
+                    'left':'700px'
+                }, {
+                    duration: 3000,
+                    easing: 'easeOutBounce'
+                });
+
+            });
+
+            box.eq(1).click(function(){
+
+                $(this).animate({
+                    'top': '120px',
+                    'left': '700px'
+                }, {
+                    duration: 3000,
+                    easing: 'easeInElastic'
+                });
+
+            });
+            
+            box.eq(2).click(function(){
+
+                $(this).animate({
+                    'top':'230px',
+                    'left': '700px'
+                }, {
+                    duration: 1000,
+                    complete: function(){
+                        $(this).animate({'top':'230px', 'left':'0px'}, 1000);
+                    }
+                });
+
+            });
+            
+            box.eq(3).click(function(){
+                
+                $(this).animate({'top':'340px','left': '700px'}, 1000, function(){
+
+                    $(this).animate({'top':'0','left':'700px'}, 1000, function(){
+
+                        $(this).animate({'top':'340px', 'left':'0'}, 1000);
+
+                    });
+
+                });
+
+            });
+
+            
+        });
+        
+    </script>
+
+
+</head>
+<body>
+    <h3>3.제이쿼리 애니메이션 옵션</h3>
+    
+    <div class="box">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+    </div>
+
+
+
+</body>
+</html>

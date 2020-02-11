@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery DropDown Menu</title>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>    
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <style>
+    
+    
+    ul, ol, li {list-style: none; padding:0; margin:0; }
+    li {background: darkcyan; text-align:center; line-height:50px;  font-weight:600;}
+    
+    a {display:block;width:100%; height:100%; text-decoration: none;color:#fff;}
+    a:hover {background: darkturquoise;}
+
+    .dropdown {width:100%; height:50px; margin:0 auto; border-bottom:8px solid darkslategrey;}
+    .dropdown > li {float:left; width:20%; height:100%;}
+    .dropdown > li > ol {display:none; height:auto;}
+
+    </style>
+
+
+    <script>
+        
+    $(function(){
+
+        var dropdown = $('.dropdown > li ');
+        
+        dropdown.hover(function(){
+            $(this).find('ol').stop().slideDown(200);
+        },function(){
+            $(this).find('ol').stop().slideUp(200);                
+        })
+    });
+    
+    </script> 
+
+
+</head>
+<body>
+
+    <h3>5.드롭다운 메뉴</h3>
+    
+    <ul class="dropdown">
+        <li>
+            <a href="https://www.naver.com" target="_blank">menu1</a>
+            <ol>
+                <li><a href="#">sub1-1</a></li>
+                <li><a href="#">sub1-2</a></li>
+                <li><a href="#">sub1-3</a></li>
+                <li><a href="#">sub1-4</a></li>
+            </ol>
+        </li>
+        <li>
+            <a href="#">menu2</a>
+            <ol>
+                <li><a href="#">sub2-1</a></li>
+                <li><a href="#">sub2-2</a></li>
+                <li><a href="#">sub2-3</a></li>
+                <li><a href="#">sub2-4</a></li>
+            </ol>
+        </li>
+        <li>
+            <a href="#">menu3</a>
+            <ol>
+                <li><a href="#">sub3-1</a></li>
+                <li><a href="#">sub3-2</a></li>
+                <li><a href="#">sub3-3</a></li>
+                <li><a href="#">sub3-4</a></li>
+            </ol>
+        </li>
+        <li>
+            <a href="#">menu4</a>
+            <ol>
+                <li><a href="#">sub4-1</a></li>
+                <li><a href="#">sub4-2</a></li>
+                <li><a href="#">sub4-3</a></li>
+                <li><a href="#">sub4-4</a></li>
+            </ol>
+        </li>
+        <li>
+            <a href="#">menu5</a>
+            <ol>
+                <li><a href="#">sub5-1</a></li>
+                <li><a href="#">sub5-2</a></li>
+                <li><a href="#">sub5-3</a></li>
+                <li><a href="#">sub5-4</a></li>
+            </ol>
+        </li>
+    </ul>
+
+</body>
+</html>

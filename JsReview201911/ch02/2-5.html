@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <title>2-5. 함수(메서드)</title>
+  <script src="js/calc.js" ></script>
+</head>
+<body>
+  
+  <h1>2-5.함수</h1>
+  <script>
+    
+    // 함수정의 
+    function fx( x ){
+      var y = 2 * x + 5 ;
+      return y;
+    }
+  
+    // 함수호출
+    var rs1 = fx(1);
+    var rs2 = fx(2);
+    var rs3 = fx(3);
+
+    document.write("<b>rs1 : </b>"+rs1+"<br>");
+    document.write("<b>rs2 : </b>"+rs2+"<br>");
+    document.write("<b>rs3 : </b>"+rs3+"<br>");
+
+    // 익명함수 정의 (변수에 담아서 사용하는 함수. javascript에서만. )
+    var f1 = function(x,y) {
+                var z = x * y;
+                return z; 
+              }
+
+    // 익명함수 호출
+    
+    var r1 = f1(2,3);
+    document.write("<b>r1 : </b>"+r1+"<br>");
+
+    
+    // 라이브러리 함수
+      var res1 = plus(1,2);
+      var res2 = minus(1,2);
+      var res3 = multi(3,4);
+      var res4 = div(12,2);
+      document.write("res1 : "+res1+"<br>");
+      document.write("res2 : "+res2+"<br>");
+      document.write("res3 : "+res3+"<br>");
+      document.write("res4 : "+res4+"<br>");
+
+
+    // 내장 함수 
+      
+      
+      var result = confirm("확인,취소버튼을 가지는 대화상자");
+
+        if(result) {
+          document.write("확인을 눌렀습니다. ");
+        }else{
+          document.write("취소를 눌렀습니다. ");
+        }
+
+      setTimeout(function(){
+        alert ("3초 타이머가 작동 되었습니다");
+      }, 1000*3);
+
+
+      setInterval(function(){
+        alert("5초마다 한번씩 타이머 작동");
+      }, 1000*5);
+      
+
+
+  </script>
+
+</body>
+</html>

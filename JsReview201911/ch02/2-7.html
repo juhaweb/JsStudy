@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <title>2-7. 배열 </title>
+</head>
+<body>
+  <h1>2-7.배열</h1>
+  <script>
+
+    // 배열 생성 : 둘 다 똑같다. (자바는 중괄호 {})
+    var arr1 = new Array(1, 2, 3, 4, 5);
+    var arr2 = [1, 2, 3, 4, 5];
+
+    // 배열 원소갯수
+    document.write("arr1 원소 갯수 : " + arr1.length + "<br>");
+    document.write("arr2 원소 갯수 : " + arr2.length + "<br>");
+
+    // 배열 원소 출력
+    document.write("arr1- 1번째 원소 : " + arr1[0] + "<br>");
+    document.write("arr1- 2번째 원소 : " + arr1[1] + "<br>");
+    document.write("arr1- 3번째 원소 : " + arr1[2] + "<br>");
+    document.write("arr1- 4번째 원소 : " + arr1[3] + "<br>");
+    document.write("arr1- 5번째 원소 : " + arr1[4] + "<br>");
+
+    // 배열 원소 반복문으로 출력
+    for(var i=0; i<arr1.length; i++){
+      document.write("arr1-  " + (i+1)+ "번째 원소 : " + arr1[i] + "<br>");
+    }
+
+    // 배열 반복문
+    for(var i in arr2){
+      var n = parseInt(i)+1;  // String을 int로 변환
+      document.write("arr2-"+ n +"번째 원소 : " + arr2[i] + "<br>");
+    }
+
+    // 2차원 배열
+    var arr2d = [ [1,2,3],
+                  [4,5,6],
+                  [7,8,9]];
+  
+    for(var a=0; a<3; a++){
+      for(var b=0; b<3; b++){
+        document.write("arr2d["+a+"]["+b+"] :" +arr2d[a][b]+"<br>")
+      }
+    }
+
+</script>
+
+
+
+
+
+</body>
+</html>

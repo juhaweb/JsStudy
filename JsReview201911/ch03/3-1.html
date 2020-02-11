@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <title>3-1. jQuery</title>
+  <script src="./js/jquery-3.4.1.js" ></script>
+  <script src="./js/jquery-3.4.1.min.js" ></script>
+  <script>
+
+    // 자바스크립트 방식
+    window.onload = function(){
+      var city = document.getElementById('city');
+      var li = city.getElementsByTagName('li');
+      li[0].style.color = 'red';
+    }     
+
+
+    // 제이쿼리 방식
+    var doc = jQuery(document);
+    doc.ready(function(){
+      
+      var li = jQuery('#city > li:nth-of-child(4)');
+      li.css('color','blue');
+
+    });
+
+    
+  </script>
+
+</head>
+<body>
+  <h3>3-1. jQuery 개념</h3>
+
+  <ul id="city">
+    <li>서울</li>
+    <li>대전</li>
+    <li>대구</li>
+    <li>부산</li>
+    <li>광주</li>
+  </ul>
+
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <title>2-8. 고급예제 : 문서객체 모델 </title>
+
+</head>
+<body>
+
+  <h1>2-8. 문서객체 모델</h1>
+
+  <div id="box1">box1</div>
+  <div id="box2">box2</div>
+  <div id="box3">box3</div>
+
+  <ul>
+    <li>서울</li>
+    <li>대전</li>
+    <li>대구</li>
+    <li>부산</li붓>
+    <li>광주</li>
+  </ul>
+
+</body>
+</html>
+
+<script>
+
+  // 문서객체 스타일 설정
+  var box1 = document.getElementById('box1');
+  box1.style.width = "100px";
+  box1.style.height = "100px";
+  box1.style.background = "orange";
+  
+  // 문서객체 생성
+  var h3 = document.createElement('h3');
+  var txt = document.createTextNode('문서객체 생성');
+  h3.appendChild(txt);
+  document.body.appendChild(h3);
+
+  // 문서객체 제거 : 실제 쓰지는 않음 2000년대 초반에 사용 -> 현 jquery
+  var ul = document.getElementsByTagName('ul');
+  document.body.removeChild(ul[0]);
+
+</script>
+
+

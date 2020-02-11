@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>4-1. jQuery 기본 함수</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script>
+  
+    $(document).ready(function(){
+
+      // 확장집합 (문서객체 배열)
+      var tags = $('ul > li');
+        console.log('tags 원소 갯수 : '+tags.length);
+
+
+      // eq() -확장집함에서 인덱스번호의 객체 선택
+      tags.eq(1).css('color','blue');
+      
+
+      // first(), last() - 확장집합에서 처음과 마지막 객체 선택
+      tags.first().css('color','red');
+      tags.last().css('color','orange');
+
+
+      // slice() - 확장집합에서 특정구간 객체 선택
+      tags.slice(1,3).css('background','#70ba9c');
+
+
+      // eath() - 확장집합의 반복문 : 익명함수가 들어감 / 확장집합 개별 객체 갯수 만큼 반복처리 함수. 
+      tags.each(function(){
+
+        // $(this) : 현재 실행중인 대상객체
+        $(this).css('border','3px solid #439c78');
+
+      }); 
+
+      // children() - 확장집합 객체의 자식 모두를 선택
+      var tags2 = tags.eq(3).children(1);
+      tags2.css('border','4px dashed #2e5594');
+
+      var tag3 = tags.eq(3).children().eq(1).children().eq(1);
+      tag3.css('background','#dfdfdf');
+
+      // next(), prev()
+      tags.first().next().next().css('list-style','none');
+      tags.last().prev().css('list-style','none');
+      
+      // parent() - 부모객체 선택
+      $('.sm').parent().parent().prev().css('font-weight','800'); 
+
+      // find() - 확장집합 안에서 특정 객체를 찾음
+      tags.find('.sm').css('color','salmon');
+
+
+    });
+
+  
+  
+  </script>
+</head>
+<body>
+  <h3>4-1. jQuery 기본 함수</h3>
+  
+  <ul>
+    <li>서울</li>
+    <li>대전</li>
+    <li>대구</li>
+    <li>
+      <i>부산</i>
+      <ol>
+        <li>남포동</li>
+        <li class="sm">서면</li>
+        <li>해운대</li>
+        <li>동래</li>
+        <li>자갈치</li>
+      </ol>
+    </li>
+    <li>광주</li>
+  </ul>
+
+  
+
+</body>
+</html>

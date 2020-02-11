@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <title>4-5. jquery 태그 추가, 이동함수. </title>
+  <script src="./js/jquery-3.4.1.js" ></script>
+  <script src="./js/jquery-3.4.1.min.js" ></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function(){
+
+      // obj 확장집합 객체 
+      var obj = $('ul');
+      
+      // 객체 추가
+      obj.append('<li><i>제주도</i></li>');
+      obj.prepend('<li><i>서울특별시</i></li>');
+      obj.after('<b> after1 </b>');
+      obj.after('<b> after2 </b>');
+      obj.before('<b> before1 </b>');
+      obj.before('<b> before2 </b>');
+      obj.wrap('<div>');
+
+      obj.children().eq(1).append('<h5>일산</h5>');
+      obj.children().eq(1).children().eq(0).after('<h5>파주</h5>');
+      obj.children().eq(1).append('<h5>광주</h5>');
+
+      // 객체 이동
+      obj.find('ol>li').eq(0).next().appendTo('ul>li:eq(1)');
+      obj.find('ol>li:eq(1)').prependTo('ul>li:eq(5)');
+      obj.find('ol>li').eq(2).appendTo('ul>li:eq(3)');
+
+      // 객체 제거
+      $('ul>li>h5:eq(0)').remove();
+      $('ul>li>h5:eq(0)').empty();
+      
+    });
+  
+  </script>
+</head>
+<body>
+  <h1>4-5. jquery 태그 추가, 이동함수.</h1>
+  <hr>
+
+  <section>
+    <ol>
+      <li><i>경기도</i></li>
+      <li><i>충청도</i></li>
+      <li><i>강원도</i></li>
+      <li>
+        <i>경상도</i>
+        <ol>
+          <li>창원</li>
+          <li>수원</li>
+          <li>목포</li>
+          <li>김해</li>
+          <li>부여</li>
+        </ol>
+      </li>
+      <li><i>전라도</i></li>
+    </ul>
+  </section>
+
+
+</body>
+</html>

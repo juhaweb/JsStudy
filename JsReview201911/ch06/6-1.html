@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>6-1</title>
+    <style>
+    
+        .box {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            border: 1px solid black;
+            background: orange;
+        }
+
+        .box1 {left:  20px; top: 100px;}
+        .box2 {left: 230px; top: 100px;}
+        .box3 {left: 440px; top: 100px;}
+
+    </style>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        
+        $(document).ready(function(){
+
+            var btn = $('button');
+
+            // show
+            btn.eq(0).click(function(){
+                $('.box1').show(1000);
+            });
+
+            // hide
+            btn.eq(1).click(function(){
+                $('.box1').hide(1000);
+            });
+            
+            btn.eq(2).click(function(){
+                $('.box1').toggle(1000);
+            });
+            
+            btn.eq(3).click(function(){
+                $('.box2').fadeIn(1000);
+            });
+            
+            btn.eq(4).click(function(){
+                $('.box2').fadeOut(1000);
+            });
+            
+            btn.eq(5).click(function(){
+                $('.box2').fadeToggle(1000);
+            });
+            
+            btn.eq(6).click(function(){
+                $('.box3').slideUp(1000);
+            });
+            
+            btn.eq(7).click(function(){
+                $('.box3').slideDown(1000);
+            });
+            
+            btn.eq(8).click(function(){
+                $('.box3').slideToggle(1000);
+            });
+
+        });
+    
+    
+    </script>
+
+
+</head>
+<body>
+    <h3>1.제이쿼리 애니메이션 기본함수</h3>
+
+    <div>
+        <button>show</button>
+        <button>hide</button>
+        <button>toggle</button>
+        <button>fadeIn</button>
+        <button>fadeOut</button>
+        <button>fadeToggle</button>
+        <button>slideUp</button>
+        <button>slideDown</button>
+        <button>slideToggle</button>
+    </div>
+
+    <div class="box box1"></div>
+    <div class="box box2"></div>
+    <div class="box box3"></div>
+    
+</body>
+</html>

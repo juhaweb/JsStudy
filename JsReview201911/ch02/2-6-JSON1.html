@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <title>JSON</title>
+</head>
+<body>
+  <script>
+  
+    // JSON (JavaScript Object Notaton) - 자바스크립트 객체 표기법
+    // 안드로이드. 아이폰. 웹 등 데이터전송 표준
+
+    // JSON 객체생성
+    var nh = {
+
+    // 멤버 변수 (키:벨류)
+    bank:"농협",
+    id:"012-345-678",
+    name:"홍길동",
+    money:30000,
+
+    // 멤버 함수
+    deposit: function(money){
+      this.money += money;
+    },
+    withdraw: function(money){
+      this.money -= money;
+    },
+    info:function(){
+      document.write("=================================<br>");
+      document.write("은 행 명 : "+this.bank+"<br>");
+      document.write("계좌번호 : "+this.id+"<br>");
+      document.write("입 금 주 : "+this.name+"<br>");
+      document.write("현재잔액 : "+this.money+"<br>");
+      document.write("=================================<br>");
+    }
+    };
+
+    nh.deposit(20000);
+    nh.withdraw(4000);
+    nh.info();  
+    
+
+  </script>
+
+</body>
+</html>

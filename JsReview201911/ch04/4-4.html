@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>4-4.jQuery 태그 내용 함수</title>
+  <style>
+  p {border:2px solid salmon;}
+  </style>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script>
+
+    $(document).ready(function(){
+
+      // 태그 내용 가져오기. 
+      var content1 = $('ul').html();
+      var content2 = $('ul').text();
+
+      console.log(content1);
+      console.log(content2);
+      
+      // 태그 내용 입력하기. 
+      $('p:eq(0)').html('<em> html함수 내용 </em>');
+      $('p').eq(1).text('<em> text함수 내용 </em>');
+
+      var div = $('.result > div');
+      div.eq(0).html($('ul').html()); 
+      div.eq(1).html($('ul').text()); 
+      div.eq(2).text($('ul').html()); 
+      div.eq(3).text($('ul').text()); 
+
+
+    });
+
+
+
+  </script>
+</head>
+<body>
+  <h1> 4. jQuery 태그 내용 함수 </h1>
+  <hr>
+  <ul>
+    <li>서울</li>
+    <li>대전</li>
+    <li>대구</li>
+    <li>부산</li>
+    <li>광주</li>
+  </ul>
+
+  <p></p>
+  <p></p>
+
+  <div class="result">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+
+
+
+
+</body>
+</html>

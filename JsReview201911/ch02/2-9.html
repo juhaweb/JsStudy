@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script src="js/2-9.js"></script>
+  <style>
+    .box, span {display:inline-block; width:100px; height:100px;  border:6px solid dodgerblue; background: lightskyblue; box-sizing: border-box;}
+    
+  </style>
+  <script>
+
+    // 핸들러 : 이벤트를 처리하는 함수 ----> 인라인방식 이벤트 구현
+
+    function clicked(){
+      alert('클릭!');
+    }
+
+    function changeBg( obj ){
+      obj.style.background = "dodgerblue";
+    }
+
+
+    // html 문서 출력이 완료된 이후 실행되는 이벤트 핸들러
+    window.onload = function(){
+
+      // 문서객체 이벤트 구현
+      var box1 = document.getElementById('box1');
+      var box2 = document.getElementById('box2');
+      var box3 = document.getElementById('box3');
+      var box4 = document.getElementById('box4');
+
+      box1.onclick = function(){ alert('클릭2'); }
+      box2.onmousemove = function(){ this.style.background="#dfdfdf"; }
+      box3.onmouseenter = function(){ this.style.background="#dfdfdf"; }
+      box4.onmouseleave = function(){ this.style.background="#dfdfdf"; }
+
+    }
+
+  </script>
+</head>
+<body>
+  <h3>2-9. 이벤트</h3>
+
+  <hr>
+
+  <!-- 인라인방식 이벤트 구현 -->
+  <div class="box box1" onclick="clicked()">box1</div>
+  <div class="box box2" onclick="changeBg(this)">box2</div>
+  <div class="box box3" onmouseover="changeBg(this)"> box3</div>
+  <div class="box box4" onmouseout="changeBg(this)">box4</div>
+
+  <hr>
+  <!-- -->
+  <span id="box1">box1</span>
+  <span id="box2">box2</span>
+  <span id="box3">box3</span>
+  <span id="box4">box4</span>
+
+  <hr>
+
+</body>
+</html>
