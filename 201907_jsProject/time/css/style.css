@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css?family=Orbitron:400,500,700,900&display=swap');
+
+/* 초기화 */
+* {margin:0; padding:0; font-family:'Orbitron', sans-serif;}
+ul, ol {list-style: none; }
+a {text-decoration: none #111; }
+
+#wrapper {position:fixed; left:0; top:0; width:100%; height:100%; min-width:1200px;background-size: cover; transition: 0.5s;}
+#wrapper.morning {background-image: url('../img/bg_morning.jpg'); }
+#wrapper.afternoon {background-image: url('../img/bg_afternoon.jpg'); }
+#wrapper.evening {background-image: url('../img/bg_evening.jpg'); }
+#wrapper.night {background-image: url('../img/bg_night.jpg'); }
+
+#wrapper.morning > .mobile { background-image: url('../img/phone_morning.png') ;}
+#wrapper.afternoon > .mobile { background-image: url('../img/phone_afternoon.png') ;}
+#wrapper.evening > .mobile { background-image: url('../img/phone_evening.png') ;}
+#wrapper.night > .mobile { background-image: url('../img/phone_night.png') ;}
+
+#wrapper.morning > .mobile > p {color: #111;}
+#wrapper.afternoon > .mobile > p {color: #111;}
+#wrapper.evening > .mobile > p {color: #fff;}
+#wrapper.night > .mobile > p {color: #fff;}
+
+/* 배경 구름 */
+.cloud {position:absolute; } 
+.cloud1 {left:-100%; top:10px; }
+.cloud2 {left:0; top:100px; }
+
+/* 스마트폰 배경 */
+.mobile {position: absolute; top:200px; right:-300px;  width:1226px; height:809px;  transition: 0.5s;}
+.mobile > p {position: absolute; overflow:hidden; top:100px; left:137px; width:540px; height:307px; font-size:60px; font-weight:600; padding: 60px 0 0 50px; box-sizing: border-box; transition: 0.5s;}
+.mobile > p > .mcd {position:absolute; width:86%;  } 
+.mobile > p > .mcd1 {left:-86%; top:10px; }
+.mobile > p > .mcd2 {left:0; top:100px; }
+
+/* 하단 버튼 */
+.menu {position:fixed; left:-40%; bottom:6%; margin-left:45%; width:90%; height:35px; box-sizing: border-box;}
+.menu > li {float:left; width:25%; height:100%;box-sizing: border-box; border-right:6px solid transparent;}
+.menu > li > a {display:block; width:100%; height:100%; background: #fff; opacity: 0.6; color:#000; padding-left:10px;  line-height: 35px;  box-sizing: border-box;  transition: 0.5s;}
+.menu > li > a:hover {background: #000; color:#fff; }
+
+
+

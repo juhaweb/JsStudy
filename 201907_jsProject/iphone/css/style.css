@@ -1,0 +1,18 @@
+    
+.section { position: relative; overflow: hidden;}
+.section img { position: absolute; }
+.section:nth-child(1) { background-color: #f0f1f5; }
+.section:nth-child(4) { overflow:visible; }
+
+.s11 {left:50%; bottom:-200px; margin-left:-345px; opacity:0.6; }
+
+.s21 {left:400px; top:50%; margin-top:-281px; }
+.s22 {left:400px; top:50%; margin-top:-281px; z-index:10;}
+.s23 {left:514px; top:50%; margin-top:-281px; }
+
+.s31 {left: 10px; top:50%; margin-top:-281px; }
+.s32 {left:300px; top:10px; }
+.s33 {left:600px; top:50%; margin-top:-131px; }
+
+.s41 {left:576px; bottom:-100px; }
+.s42 {left:300px; bottom:-100px; }

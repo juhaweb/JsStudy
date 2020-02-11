@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>CAR 360VR</title>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+    <script>
+
+        $( function() {
+            for(var i=0 ; i<120 ; i++ ) {
+
+                var path = './img/car'+i+'.jpg';
+                var imgTag = $('<img />').attr('src',path);
+
+                $('#img').append(imgTag);
+            }
+
+            //모든 자동차 이미지 hide, 첫번째 이미지만 show
+            var img120 = $('#img > img')
+            img120.hide().eq(0).show();
+                        
+            $( "#slider" ).slider({
+              
+            min: 0,
+            max: 119,
+            slide : function(e, ui){
+                img120.hide().eq(ui.value).show();
+                                
+                // console.log(ui.value)
+            }
+            });
+        });
+
+    </script>
+    <style>
+        body{margin:5%;}
+        #slider{width:580px; margin:10px; }
+    </style>
+
+</head>
+<body>
+    <h3> CAR 360VR</h3>
+    <div id="img"></div>
+    <div id="slider"></div>
+</body>
+</html>
+
+

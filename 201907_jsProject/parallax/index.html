@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>parallax</title>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="./css/style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="./js/jquery.scrolly.js"></script>
+
+    <script>
+    $(document).ready(function(){
+        // $('section:eq(0)').scrolly({'bgParallax': true});
+        $('.obj').scrolly();
+    });
+
+    </script>
+    
+</head>
+<body>
+    <div id="wrapper">
+        <section>
+            <img src="./img/obj11.png" class="obj obj11" data-velocity=".3">
+            <img src="./img/obj12.png" class="obj obj12" data-velocity="-.1">
+            <img src="./img/obj13.png" class="obj obj13" data-velocity="-.3">
+            <img src="./img/obj14.png" class="obj obj14" data-velocity=".3">
+            <img src="./img/obj15.png" class="obj obj15" data-velocity="-.3">
+            <img src="./img/obj16.png" class="obj obj16" data-velocity=".7">
+            <img src="./img/obj17.png" class="obj obj17" data-velocity=".4">
+        </section>
+        <section>
+            <img src="./img/obj21.png" class="obj obj21" data-velocity="0.3">
+            <img src="./img/obj22.png" class="obj obj22" data-velocity="0.4">
+            <img src="./img/obj23.png" class="obj obj23" data-velocity="0.5">
+            <img src="./img/obj24.png" class="obj obj24" data-velocity="0.6">
+            <img src="./img/obj25.png" class="obj obj25" data-velocity="0.7">            
+        </section>
+        <section>
+            <img src="./img/obj31.png" class="obj obj31" data-velocity=".1">
+            <img src="./img/obj32.png" class="obj obj32" data-velocity=".2">
+        </section>
+    </div>
+
+</body>
+</html>
+
+
+<!--     
+작업 http://u66kie.dothome.co.kr/parallax/
+쌤꺼 http://kimsabu.cafe24.com/parallax/ 참고원본 
+-->
+

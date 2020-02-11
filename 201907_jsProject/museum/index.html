@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>MUSEUM</title>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <link rel="stylesheet" href="css/style.css"> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <script>
+
+        // gnb메뉴 마우스오버 
+        $(document).ready(function(){
+            var gnb = $('header .gnb a ');
+            var gnbSub = $('header .sub');
+
+            gnb.click(function(){
+                gnbSub.slideDown(300);            
+            });
+            
+            $('header').mouseleave(function(){
+                gnbSub.slideUp(300);
+            });
+        });
+
+
+        // bxslider
+        $(function(){
+            $('.slider > ul').bxSlider({pager:false});
+        });
+
+
+        // 오른쪽 사이드메뉴
+        $(function(){
+            $('#menu').click(function(){
+                $('#side').animate({'right':'0%'},200);
+                $('#layout').show(); 
+            });
+            $('#layout').click(function(){
+                $('#side').animate({'right':'-30%'},200);
+                $('#layout').hide();
+            });
+        });
+
+
+        /* 동적레이아웃 출력1
+        $(function(){
+
+            var poster2 = $('main img[alt=poster2]');
+            var poster3 = $('main img[alt=poster3]');
+
+            poster2.click(function(){
+                $('.box2').slideDown(300);
+            });
+
+            poster3.click(function(){
+                $('.box3').show();
+                $('.box2').hide();
+            });
+
+            $('.btnClose').click(function(){
+                $('.box').slideUp(300);
+            });
+
+            */
+
+        // 동적레이아웃 출력2
+        $(function(){
+
+            var poster2 = $('main img[alt=poster2]');
+            var poster3 = $('main img[alt=poster3]');
+            var btnClose = $('.btnClose');
+            var box2 = $('.box2');
+            var box3 = $('.box3');
+
+            btnClose.click(function(){
+                $(this).parent().slideUp(300);
+            });
+
+            poster2.click(function(){
+                if($(box3).is(':visible')){
+                    $(box3).hide();
+                    $(box2).show();
+                }else{
+                    box2.slideDown(300);
+                }
+            });
+
+            poster3.click(function(){
+                if($(box2).is(':visible')){
+                    $(box2).hide();
+                    $(box3).show();
+                }else{
+                    box3.slideDown(300);
+                }
+            }); 
+
+            btnClose.click(function(){
+                $('.box').slideUp(300);
+            }); 
+
+        });
+        
+    </script>
+</head>
+
+<body>
+
+    <div id="wrapper">
+        <div id="layout"></div>
+
+        <!--헤더-->
+        <header>
+            <div class="top">
+                <div>
+                    <p>
+                        <a href="#">찾아오시는길</a>
+                        <a href="#">ENGLISH</a>
+                        <a href="#">SITE MAP</a>
+                    </p>
+                </div>
+            </div>
+            <div class="head">
+                <div>
+                    <a href="#" class="logo"><img src="./img/header_logo.gif" alt="logo"></a>
+                    <ul class="gnb">
+                        <li><a href="#">이용마당</a></li>
+                        <li><a href="#">전시마당</a></li>
+                        <li><a href="#">자료마당</a></li>
+                        <li><a href="#">소통마당</a></li>
+                        <li><a href="#">박물관소개</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 서브메뉴 -->
+            <div class="sub">
+            </div>
+
+            <!-- 오른쪽 사이드 메뉴 -->
+            <button id="menu">메뉴</button>
+            <aside id="side"></aside>
+
+        </header>
+
+        <main>
+            <!--메인슬라이드-->
+            <section>
+                <div class="slider">
+                    <ul>
+                        <li><img src="./img/slider_img1.gif" alt="슬라이드1"></li>
+                        <li><img src="./img/slider_img2.gif" alt="슬라이드2"></li>
+                        <li><img src="./img/slider_img3.gif" alt="슬라이드3"></li>
+                    </ul>
+                </div>
+            </section>
+            <!--메인배너들-->
+            <section>
+                <div class="box box2">
+                    <button class="btnClose">close</button>
+                    <h3>한은갤러리</h3>
+                </div>
+                <div class="box box3">
+                        <button class="btnClose">close</button>
+                        <h3>특별기획전</h3>
+                </div>
+                <div class="content">
+                    <article></article>
+                    <article>
+                            <img src="./img/main_quick2_poster.jpg" width="100px" alt="poster2">
+                    </article>
+                    <article>
+                            <img src="./img/main_quick3_poster.jpg" width="100px" alt="poster3">
+                    </article>
+                    <article></article>
+                    <article></article>
+                    <article></article>
+                    <article></article>
+                    <article class="go">
+                        <a href="#">
+                            <img src="./img/main_quick8_tit.gif" alt="화폐검색">
+                            <img src="./img/main_quick8_txt.gif" alt="화폐검색">
+                            <img src="./img/main_quick_go.gif" alt="go">
+                        </a>
+                    </article>
+                    <article class="go">
+                        <a href="#">
+                                <img src="./img/main_quick9_tit.gif" alt="화폐검색">
+                                <img src="./img/main_quick9_txt.gif" alt="화폐검색">
+                                <img src="./img/main_quick_go.gif" alt="go">
+                        </a>
+                    </article>
+                    <article class="go">
+                         <a href="#">
+                                 <img src="./img/main_quick10_tit.gif" alt="화폐검색">
+                                 <img src="./img/main_quick10_txt.gif" alt="화폐검색">
+                                 <img src="./img/main_quick_go.gif" alt="go">
+                         </a>
+                    </article>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <!-- 980px ~ Layout -->
+            <div class="desk">
+                <img src="./img/footer_logo.gif" alt="로고">
+                <address>
+                    부산광역시 부산진구 부전동 123-1 <br/>
+                    5층 더조은컴퓨터학원
+                </address>
+            </div>
+            <!-- 960px ~ 979px Layout -->
+            <div class="tablet">
+                <div>
+                <a href="#">개인정보 처리방침</a>
+                <a href="#">저작권 정책</a>
+                <a href="#">홈페이지 이용안내</a>
+                </div>
+                <address>
+                    서울특별시 중구 남대문로 39 (남대문로 3가 110) 대표전화 02)759-4881, 4882 <br/>
+                    Copyright THE BANK OF KOREA 2013. All rights reserved.
+                </address>
+            </div>
+        </footer>
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>CAR VR</title>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+    <script>
+        $( function() {
+          $( "#slider" ).slider({
+              min: 0,
+              max: 119,
+              slide : function(e, ui){
+                
+                var path = './img/car'+ui.value+'.jpg';
+                $('img').attr('src',path);
+                
+                // console.log(ui.value)
+              }
+          });
+        } );
+    </script>
+    <style>
+        body{margin:5%;}
+        #slider{width:580px; margin:10px; }
+    </style>
+
+</head>
+<body>
+    <h3> CAR 360VR</h3>
+    <img src="./img/car0.jpg" alt="car">
+    <div id="slider"></div>
+</body>
+</html>
+
+<!-- 
+쌤꺼 http://kimsabu.cafe24.com/car/
+슬라이더 https://jqueryui.com/slider/
+-->
