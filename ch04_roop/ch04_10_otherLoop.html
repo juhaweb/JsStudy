@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>ch4.10</title>
+</head>
+<body>
+    <h3>4.10 for of (ECMAScript6)</h3>
+    <script>
+        // for in 반복문
+        var array = [1,2,3,4];
+        for (var i in array){
+            document.write(i+'번째 요소는'+array[i]+'입니다.<br>');
+        }
+    
+    </script>
+    <hr>
+    <script>
+        // for of 반복문
+        for (const element of [1,2,3,4]){
+            document.write(`요소는 ${element} 입니다.<br>`);
+        }
+
+        // for of 반복문에서 반복 횟수 확인
+        let j = 0;
+            for (const element2 of [1,2,3,4]){
+                document.write(`${j}번째 요소는 ${element2} 입니다.<br>`);
+                j++
+            }
+    </script>
+</body>
+</html>

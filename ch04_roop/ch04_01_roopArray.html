@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>ch4.1-2</title>
+</head>
+<body>
+    <h3>4.1</h3>
+    <script>
+        // 반복문 미리보기
+        for (var i=0; i<20; i++) {
+            document.writeln('출력'+i+'<br>');
+        }        
+    </script>
+    <hr>
+
+    <h3>4.2 배열</h3>
+    <script>
+        // 배열 선언과 출력
+        var array = [123,456,789,1000,1024];
+        document.write(array);
+        document.write('<br>');
+
+        // 요소에 접근하는 방법
+        var array2 = [273, 'String', true, function () { }, {}, [273, 103]];
+        document.write(array2+'<br>');
+        document.write(array2[0]+'<br>');
+        document.write(array2[1]+'<br>');
+        document.write(array2[2]+'<br>');
+        document.write(array2[3]+'<br>');
+        document.write(array2[4]+'<br>');
+        document.write(array2[5]+'<br>');
+        document.write(array2[6]+'<br>');
+    </script>
+    <hr>
+
+    <h3>push 추가</h3>
+    <script>
+        // push() 메서드로 배열에 요소 추가
+        var array3 = [0,2];
+        array3.push(4);
+        array3.push(8);
+        array3.push(16);
+
+        document.write(array3);
+    </script>
+    <hr>
+</body>
+</html>

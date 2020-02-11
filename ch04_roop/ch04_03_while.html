@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>ch4.3-4</title>
+</head>
+<body>
+    <h3>4.3 while</h3>
+    <script>
+        // while 반복문
+        var value = 0;
+        while (value <= 5) {
+            document.write(value+'번째 반복<br>');
+            value++;
+        }
+
+        // 외부에서 조건 변경
+        var value = 0;
+        var startTime = new Date().getTime();
+        // while 반복문: 현재 시각을 변수 startTime에 저장하고 1초후 반복문 종료 
+        while (new Date().getTime() < startTime + 1000) { value++; }
+        // 출력
+        document.write(value);
+
+    </script>
+    <hr>
+    <h3>4.4 do while</h3>
+    <script>
+
+        // do while 반복문
+        var value = 0;
+        do {
+            document.write(value + '번째 반복문<br>');
+            value++;
+        } while (value <= 5);
+        
+    </script>
+    <hr>
+</body>
+</html>
