@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <title>4-4 (07.10)</title>
+    <script>
+
+        //jQuery로 태그 내용을 가져오고 추가하는 함수.
+
+        
+        $(document).ready(function(){
+            
+            var rs1 = $('ul').html();
+            var rs2 = $('ul').text();
+
+            console.log(rs1);
+            console.log(rs2);
+
+            var pTag = $('p');
+            pTag.eq(0).html('<i>html 함수 내용</i>');   //html은 태그까지 
+            pTag.eq(1).text('<i>text 함수 내용</i>');   //text는 내용만
+
+            /*
+            pTag.eq(0).html(rs1);
+            pTag.eq(1).text(rs2);
+            */
+
+            var div = $('.result>div');
+            var r1 = $('ul').html();
+            var r2 = $('ul').text();
+
+            div.eq(0).html(r1);
+            div.eq(1).html(r2);
+            div.eq(2).text(r1);
+            div.eq(3).text(r2);
+
+
+
+
+
+        });
+
+    </script>
+    <style>
+        p{border:1px solid blue;}
+        div{margin:20px 0;}
+    </style>
+
+</head>
+<body>
+    <h3>4. 제이쿼리 태그내용함수</h3>
+
+
+    <ul>
+        <li>서울</li>
+        <li>대전</li>
+        <li>대구</li>
+        <li>부산</li>
+        <li>광주</li>
+    </ul>
+
+    <p></p>
+    <p></p>
+
+    <div class="result">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+</body>
+</html>

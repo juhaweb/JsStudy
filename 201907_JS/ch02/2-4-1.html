@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>2-4(07.02/07.03)</title>
+</head>
+<body>
+    <h3>4.반복문</h3>
+    <script>
+
+        // for (변수;조건;증감식)
+        for(var i=1 ; i<=3 ; i++ ){
+        document.write('Hello Javascript !<br/>');
+        }
+        
+        // for 1부터 10까지 합
+        document.write('<br/>')
+        var sum = 0;
+        for(var k=1 ; k<=10 ; k++ ){
+            sum += k //sum = sum + k; 와 같음
+            }
+        document.write('1부터 10까지 합 : '+sum+'<br/>');
+
+        // for 1부터 10까지의 짝수 합
+        var tot = 0;
+        for(var k=1; k<=10; k++) {
+            if( k%2 == 0){
+                tot = tot + k;
+            }
+        }
+        document.write('1부터 10까지의 짝수 합 : '+tot+'<br/>');
+
+        // 이중 for 문
+        document.write('<br/>')
+        for(var a=1; a<=3; a++ ){    //for안에 a 저건 for안에서 선언가능.
+            document.write('<b>a:'+a+'<br/></b>');
+
+            for(var b=1; b<=5; b++ ){
+                document.write('b:'+b+'<br/>');
+            }
+        }
+
+        // for 구구단 출력
+        document.write('<br/>')
+        for(var a=2 ; a<=9 ; a++){
+
+            document.write('<h4>'+a+'단</h4>');
+            for(var b=1; b<=9; b++){
+                
+                var c = a * b;
+                document.write(a+' x '+b+' = '+c+'<br/>');
+
+            }
+        }
+
+        // for 별삼각형 출력
+        document.write('<br/><b>별삼각형출력</b><br/>')
+        
+        for(var a=10; a>=1; a--){
+
+            for(var b=1; b<=a; b++){
+                document.write('★');
+                }
+            document.write('<br/>');
+            }
+
+    </script>
+
+
+</body>
+</html>

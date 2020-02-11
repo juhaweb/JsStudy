@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>3-3(07.08)</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+
+        //자식선택자
+        $('ol>li').css('color','#D0F');
+        $('body > em').css('color','orange');
+        $('li > em').css('font-weight','700');
+
+        //후손선택자
+        $('li li').css('background','lime');
+        
+        //형제선택자
+        $('em ~ ul').css('border','3px solid #F00');
+
+        });
+
+    </script>
+</head>
+<body>
+    <h3>3.자식,후손선택자</h3>
+    <em>대한민국 도시</em>
+    <ul>
+        <li>서울</li>
+        <li>대전</li>
+        <li>대구</li>
+        <li>
+            <em>부산</em>
+            <ol>
+                <li>서면</li>
+                <li>자갈치</li>
+                <li>남포동</li>
+                <li>해운대</li>
+            </ol>
+        </li>
+        <li>광주</li>
+    </ul>
+</body>
+</html>

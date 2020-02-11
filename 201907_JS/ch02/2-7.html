@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>2-7 (07.05)</title>
+</head>
+<body>
+    <h3>7.배열 (Array)</h3>
+    <script>
+        // 변수
+        var a=1, b=2, c=3, d=4, e=5;
+        
+        // 배열
+        var arr1 = new Array (1, 2, 3, 4, 5);
+        var arr2 = [1, 2, 3, 4, 5, 6, 7, 8, 9];     //arr1, arr2 완전똑같음
+
+        // 배열 원소 갯수
+        document.write ('arr1 원소개수 : '+arr1.length+'<br/>');
+        document.write ('arr2 원소개수 : '+arr2.length+'<br/><br/>');
+
+        // 배열 원소 출력
+        document.write('arr2 2번째 원소 : '+arr2[8]+'<br/><br/>')
+
+        for (var i=0; i<=4; i++) {
+            var count = i+1
+
+            document.write('arr2: '+count+'번째 원소 : '+arr2[i]+'<br/>')
+        }
+
+        //배열 원소의 합
+        var score = [78, 65, 67, 88, 92, 67, 82, 97, 76, 78 ]; 
+        var sum = 0;
+
+        /* for (var i=0; i<score.length; i++){
+            sum += score[i];
+            }
+        document.write('<br/>score의 합: '+sum+'<br/>')          */
+
+        for (var i in score){  // 배열 전용 반복문
+            sum += score[i];
+            }
+        document.write('<br/>score의 합: '+sum+'<br/><br/>') 
+        
+        // 배열 연습
+        var animal = ['사자','호랑이','코끼리','기린','곰']
+
+        for(var i in animal){
+            document.write('animal['+i+'] : '+animal[i]+'<br/>')    //i는 인덱스번호
+        }
+
+        document.write('<br/>animal :'+animal+'<br/>')
+
+
+        // 2차원 배열 (행.열)
+        var arr2d = [[1,2,3],
+                     [4,5,6],
+                     [7,8,9]];
+
+        document.write('arr2d[0행][0열] : '+arr2d[0][0]+'<br/>');
+        document.write('arr2d[0행][1열] : '+arr2d[0][1]+'<br/>');
+        document.write('arr2d[0행][2열] : '+arr2d[0][2]+'<br/>');
+
+        document.write('arr2d[1행][0열] : '+arr2d[1][0]+'<br/>');
+        document.write('arr2d[1행][1열] : '+arr2d[1][1]+'<br/>');
+        document.write('arr2d[1행][2열] : '+arr2d[1][2]+'<br/>');
+
+        document.write('arr2d[2행][0열] : '+arr2d[2][0]+'<br/>');
+        document.write('arr2d[2행][1열] : '+arr2d[2][1]+'<br/>');
+        document.write('arr2d[2행][2열] : '+arr2d[2][2]+'<br/>');
+
+        
+        //반복문으로
+
+        for(var a=0; a<3; a++){
+
+            for(var b=0; b<3; b++){
+                document.write('arr2d['+a+']['+b+'] : '+arr2d[a][b]+'<br/>');
+
+            }
+        }
+
+
+    
+    </script>
+    
+</body>
+</html>

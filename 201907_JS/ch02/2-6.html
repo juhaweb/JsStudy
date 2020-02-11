@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>2-6(07.04)</title>
+    <script src="./js/Account.js"></script>
+</head>
+<body>
+    <h3>6.객체(object)</h3>
+    <h4>1)객체생성 및 실행</h4>
+    <script>
+        // script = ./js/Account.js
+        //객체생성1.
+
+        var kb = new Account('국민은행','010-66577-017','하정욱',10000);   //kb안에 기능이 입출잔액조회가 들어있음. 
+        kb.deposit(40000);  //입금
+        kb.withdraw(7000);  //출금
+        kb.info();          //잔액조회
+
+        //객체생성2.
+        var wr = new Account('우리은행','010-66577-017','홍길동',30000);  // 기능을 포함하고있는 구조체 wr
+        wr.deposit(6387436515000);
+        wr.withdraw(35384834310);
+        wr.info();
+    </script>
+
+    <br/>
+    <hr>
+    <h4>2)내장객체 - 날짜/시간</h4>
+    <script>
+        //내장객체 - 날짜객체 Date브라우저에 내장되어있음. 
+        var date = new Date();
+        var y = date.getFullYear();  //현재년도
+        var m = date.getMonth()+1;     //현재월
+        var d = date.getDate();      //현재일
+        var hour = date.getHours();    // 현재시간
+        var min = date.getMinutes();   // 현재분
+        var sec = date.getSeconds();   // 현재초
+
+        var ymd = '오늘 날짜는'+y+'/'+m+'/'+d+'입니다.<br/>'
+        var hms = '현재 시간은'+hour+'/'+min+'/'+sec+'입니다.<br/><br/>'
+
+        document.write(ymd);
+        document.write(hms);
+    </script>
+
+    <hr>
+    <h4>3)내장객체 - 수학객체</h4>
+    <script>
+        //내장객체 - 수학객체 
+        // var math = new Math(); 이렇게 안씀
+        var r1 = Math.abs(-5);   //-5의 절대값    --->5
+        var r2 = Math.ceil(1.2); // 올림값(반올림아님)  --->2  (정수부.실수부)  정수부+1
+        var r3 = Math.ceil(1.9); // ---->2
+        var r4 = Math.floor(1.2); // 내림값(반올림아님)  --->1  (정수부.실수부)  실수부 -
+        var r5 = Math.floor(1.9); // ---->1 
+        var r6 = Math.round(1.4); // 반올림.  --->1
+        var r7 = Math.round(1.8); // 반올림.  --->2
+        
+        document.write('<br/>내장객체-수학객체<br/>');
+        document.write('r1 : '+r1+'<br/>');
+        document.write('r2 : '+r2+'<br/>');
+        document.write('r3 : '+r3+'<br/>');
+        document.write('r4 : '+r4+'<br/>');
+        document.write('r5 : '+r5+'<br/>');
+        document.write('r6 : '+r6+'<br/>');
+        document.write('r7 : '+r7+'<br/><br/>');
+
+        var num1 = Math.random();  // 0에서 1 사이의 실수
+        document.write('num1 : '+num1+'<br/>');
+
+        var num2 = num1*46;  // num1에 46을 곱함 (0~46사이의 실수)
+        document.write('num2 : '+num2+'<br/>');
+
+        var num3 = Math.ceil(num2) // num2의 정수(0~11사이의 정수)  -->로또할때 써먹음.
+        document.write('num3 : '+num3+'<br/>');
+
+        // = 
+        var result = Math.ceil(Math.random()*46);
+        document.write('result : '+result+'<br/>');
+    </script>
+
+    <hr>
+    <h4>4)내장객체 - 문자열 객체</h4>
+    <script>
+
+        //문자열 객체        
+        var obj = new String('Hello Javascript');   //보편적인 생성법
+        var str = 'Hello Javascript';               //간편한 생성법
+                
+        var c1 = str.charAt(0);         // 문자열에서 하나의 문자를 추출 (띄어쓰기 포함)
+        var c2 = str.charAt(6);
+        var c3 = str.length;            // ();함수기호 없음. str객체의 멤버변수 = 16개. // 문자열의 문자객수
+        var c4 = str.indexOf('a');     // a가 처음 나오는부분. 7     ==>-1은 없는거여 . // 문자열 앞에서부터 특정 문자의 인덱스번호 추출
+        var c5 = str.lastIndexOf('a');  // a가 마지막으로 나오는 부분. 9  // 문자열 뒤에서부터 특정 문자의 인덱스번호 추출
+        var c6 = str.replace('Javascript','jQuery');    // 텍스트 대치 (문자열 교체)
+        var c7 = str.substring(1,6);                    // 1~5까지 특정 구간 문자열 자르기 
+
+        document.write('c1 : '+c1+'<br/>');
+        document.write('c2 : '+c2+'<br/>');
+        document.write('c3 : '+c3+'<br/>');
+        document.write('c4 : '+c4+'<br/>');
+        document.write('c5 : '+c5+'<br/>');
+        document.write('c6 : '+c6+'<br/>');
+        document.write('c7 : '+c7+'<br/>');
+        
+    
+    
+    </script>
+
+
+
+
+</body>
+</html>
+

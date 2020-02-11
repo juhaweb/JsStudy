@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>2-9(07.05)</title>
+    <script>
+        window.onload = function(){
+            
+            var box1 = document.getElementById('box1');
+            var box2 = document.getElementById('box2');
+            var box3 = document.getElementById('box3');
+            var box4 = document.getElementById('box4');
+
+            box1.onclick = function(){
+                alert('클릭햇씀');
+            }
+
+            box2.onclick = function(){
+                this.style.background='coral';               
+            }
+
+            box3.onmouseenter = function(){
+                this.style.background = 'lime';
+            }
+
+            box4.onmouseleave = function(){
+                this.style.background = 'red';
+            }
+
+        }    //onload 끝
+        
+
+
+        // 핸들러 : 이벤트를 처리하는 함수 
+        function clicked(){
+            alert('click!!');
+        }
+
+        function changeColor( tag ){
+            tag.style.background='coral';
+        }
+
+        
+    </script>
+
+    <style>
+    .box {display:inline-block;
+          width:100px;height:100px;
+          border:1px solid #378286;
+          background: chocolate;}
+
+    span {display:inline-block;width:100px;height:100px;
+          border:1px solid #90c430;
+          background: #91c023;}
+    </style>
+
+</head>
+<body>
+    <h3>9.이벤트<h3>
+    <!-- 인라인 이벤트 -->
+    <div class="box box1" onclick="clicked()">box1</div>  <!--on 들어가면 이벤속성-->
+    <div class="box box2" onclick="changeColor(this)">box2</div>
+    <div class="box box3" onmouseover="changeColor(this)">box3</div>
+    <div class="box box4" onmouseout="changeColor(this)">box4</div>
+
+    <hr/>
+    <span id="box1">box1</span>
+    <span id="box2">box2</span>
+    <span id="box3">box3</span>
+    <span id="box4">box4</span>
+
+    <a href="https://www.inflearn.com/users/181385/my-courses">인프런 2강좌 </a>
+</body>
+</html>

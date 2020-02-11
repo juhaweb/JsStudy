@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <title>4-5 (07.10)</title>
+    <script>
+
+        //$(document).ready(function(){});
+        $(function(){
+
+            //태그(객체)추가
+            var ol = $('ol');
+
+            ol.append('<li>단양</li>');   //뒤에추가
+            //ol.append('<li>단양2</li>');   //뒤에또추가
+            ol.after('<b>after1 </b>'); 
+            ol.after('<b>after2 </b>'); 
+
+            ol.prepend('<li>제천</li>');  //앞에추가
+            //ol.prepend('<li>제천2</li>');  //또앞에추가
+            ol.before('<b>before1 </b>');
+            ol.before('<b>before2 </b>');
+
+            //태그(객체)이동
+            var li = $('ol > li');
+
+            li.eq(0).appendTo('section');   // eq(제천)을 section 내용 뒤에. 
+            li.eq(3).prependTo('section');   // eq(영주)를 section 내용 앞에.
+
+        });
+
+
+
+    </script>
+
+
+</head>
+<body>
+    <h3>5.제이쿼리 태그 추가, 이동 함수</h3>
+    <section>
+    <ul>
+        <li>서울</li>
+        <li>대전</li>
+        <li>
+            <ol>
+                <li>안동</li>
+                <li>상주</li>
+                <li>영주</li>
+            </ol>
+        </li>
+        <li>부산</li>
+        <li>광주</li>
+    </ul>
+    </section>
+</body>
+</html>

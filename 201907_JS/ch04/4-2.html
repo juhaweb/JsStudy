@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <title>4-2 (07.09)</title>
+
+    <script>
+    
+    $(function(){
+
+        // $('.box1').click(function(){});   // jQuery 클릭 이벤트 함수.  
+
+        // class의미의 .점안찍어도됨. 
+        $('.box1').click(function(){
+            $(this).addClass('red');  
+        });
+
+        //클래스 지우기
+        $('.box2').click(function(){
+            $(this).removeClass('box2 green'); 
+        });
+
+        // has 있는지 없는지 검사. 
+        $('.box3').click(function(){
+            var result = $(this).hasClass('blue');      
+
+            if(result){
+                $(this).removeClass('blue');
+            }else{
+                $(this).addClass('blue');
+            }
+        });
+        
+        // has에 if else 쓴거랑 같음. 
+        $('.box4').click(function(){
+            $(this).toggleClass('blue');
+        });
+
+    });
+    </script>
+
+    <style>
+        .box { width:100px; height:100px; border: 2px solid black; float:left;margin:10px;}
+        h3 {clear:both;}
+        .red {background: red;}
+        .green {background: green;}
+        .blue {background:blue;}
+
+    </style>
+        
+</head>
+<body>
+    <h3>2.jQuery 클래스 함수</h3>
+    <div class="box box1">box1</div>
+    <div class="box box2 green">box2</div>
+    <div class="box box3">box3</div>
+    <div class="box box4">box4</div>
+    
+    <h3>탭메뉴</h3>
+    <style>
+        #tab {width:500px; height:300px; border:1px solid red;box-sizing:border-box;}
+        #tab > div {width:100%;height:30px;border:1px solid blue;box-sizing:border-box;}
+        #tab > div > button {width:50px;}
+        #tab > article {position:relative;width:100%;height:270px;border:1px solid green;box-sizing:border-box;}
+        #tab > article > section {display:none;position:absolute;left:0;top:0;width:100%;height:100%;border:5px dashed red;background:pink;box-sizing:border-box;}
+        #tab > article > section.on {display:block;}
+        /*class값 on이 지정된 섹션임. */
+
+    </style>
+    <script>
+        $(function(){
+            var btn = $ ('#tab > div > button');
+            var tabSection = $ ('#tab > article > section');
+
+            btn.eq(0).click(function(){
+                tabSection.removeClass().eq(0).addClass('on');     //removeClass()안에 값은 빠져도 상관없음. 
+            });
+
+            btn.eq(1).click(function(){
+                tabSection.removeClass().eq(1).addClass('on');
+            });
+
+            btn.eq(2).click(function(){
+                tabSection.removeClass('on').eq(2).addClass('on');
+            });
+
+            btn.eq(3).click(function(){
+                tabSection.removeClass('on').eq(3).addClass('on');
+            });
+        });
+
+    </script>
+    <section id="tab">
+        <div>
+            <button>탭1</button>
+            <button>탭2</button>
+            <button>탭3</button>
+            <button>탭4</button>
+        </div>
+        <article>
+            <section class="on"><h3>탭1 내용입니다.</h3></section>
+            <section><h3>탭2 내용입니다.</h3></section>
+            <section><h3>탭3 내용입니다.</h3></section>
+            <section><h3>탭4 내용입니다.</h3></section>
+        </article>
+    </section>
+    
+</body>
+</html>

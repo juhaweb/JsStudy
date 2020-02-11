@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>2-5(07.03)</title>
+    <script src="./js/lib.js"></script>
+</head>
+<body>
+    <h3>5.함수</h3>
+    <script>
+    
+    //★ 기본함수정의
+    function fx(x){           // 펑션으로 x매개변수 정의하고
+        var y = 2 * x + 3; 
+        return y;   // 리턴값은 없을수있어. 
+    }
+    //+기본함수호출
+    var r1 = fx(2);
+    var r2 = fx(3);
+    var r3 = fx(4);
+
+    document.write('r1 : '+r1+ '<br/>');
+    document.write('r2 : '+r2+ '<br/>');
+    document.write('r3 : '+r3+ '<br/><br/>');
+
+
+
+    //★ 익명함수 (변수에 담아서 사용하는 함수)
+    // var my = function(){}
+
+    var my = function(x,y){
+        var z = x * y;
+        return z;
+    }
+
+    //+익명함수호출
+    var rs1 = my(2, 3);
+    var rs2 = my(5, 7);
+    document.write('rs1 :'+rs1+'<br/>');
+    document.write('rs2 :'+rs2+'<br/><br/>');
+
+
+
+
+    //★ 라이브러리 함수  js폴더 안의 lib.js
+    // 상단     <script src="js/lib.js">
+
+    var res1 = plus(1,2);
+    var res2 = minus(1,2);
+    var res3 = multi(3,5);
+    var res4 = div(8,2);
+    document.write('res1 : '+res1+'<br/>');
+    document.write('res2 : '+res2+'<br/>');
+    document.write('res3 : '+res3+'<br/>');
+    document.write('res4 : '+res4+'<br/><br/>');
+
+
+    //★ 내장함수
+    alert('기본 대화상자');
+    var result = confirm('확인이나 취소하세요 대화상자');  //확인을 누르면 true -> if, 취소를 누르면 false -> else. 
+
+    if(result){
+        document.write(' 확인눌렀구만<br/>');
+    }else{
+        document.write(' 취소눌렀구만<br/><br/>');
+    }
+
+
+    //★ 시한폭탄 함수 setTimeout( 익명함수 function(){} , 시간1000이 1초 );
+    setTimeout(function(){
+        alert('setTimeout 함수가 실행되었습니다!!!!!!!!!!!!!! '); // 팝업에 많이씀 갑자기 안뜨고 나중에 똭. 
+    }, 1000*3 );
+
+
+    //★ 주기함수 setInterval( 익명함수 function(){} , 시간1000이 1초 );
+    setInterval(function(){
+        alert('setInterval 함수가 3초마다 반복실행됩니다 ')
+    }, 1000*3 );  //3초마다 익명함수 실행된다. 그왜 3초마다 슬라이드 되는 배너. 
+
+    //내장함수는 많음. 레퍼런스를 열심히 찾으셈. 
+    
+    
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>3-4 (07.08)</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $(window).ready(function(){
+            
+            $('ul > li:first-child').css('color','red');
+            $('ul > li:nth-child(2)').css('color','orange');
+            $('ul > li:eq(2)').css('color','green');   //eq  0부터 시작하는 인덱스번호 
+            $('ul > li:nth-child(4)').css('color','blue');
+            $('ul > li:last-child').css('color','purple');
+            
+            $('h3:nth-child(2)').css('font-weight','700');
+            $('h3:nth-child(4)').css('border','2px dotted red');  // body 아래 자식순서 (*)
+            $('h3:nth-of-type(1)').css('border','2px solid black');  //h3타입 순서 중 3번째       
+            
+        });
+    
+        $(function(){
+
+            //속성선택자
+            $('li[title=dy]').css('color','red');
+            $('li[title=sw]').css('color','orange');
+            $('li[role=kh]').css('color','blue');
+            $('li[class=dy]').css('color','purple');
+
+        });
+    
+    
+    </script>
+</head>
+<body>
+
+    <h3>4. 구조선택자</h3>
+    <h3>광역시</h3>
+    <ul>
+        <li>서울</li>
+        <li>대전</li>
+        <li>대구</li>
+        <li>부산</li>
+        <li>광주</li>
+    </ul>
+
+    <h3>도시</h3>
+    <ol>
+        <li title="dy">단양</li>
+        <li title="sw">수원</li>
+        <li role="ys">양산</li>
+        <li role="kh">김해</li>
+        <li class="dy">담양</li>
+    </ol>
+
+</body>
+</html>

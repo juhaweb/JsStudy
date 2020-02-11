@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>7-2 (07.15)</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <style>
+        * {margin:0; padding:0; list-style: none;}
+        .bx-wrapper {box-shadow: none !important;border:none;}
+
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            //slider1
+            $('.slider1').bxSlider({
+                'slideWidth' :'280px',
+                'pager': false,     // 슬라이더 인디케이터
+                'controls': false,   // next prev 버튼 
+                'auto' : true, // 자동슬라이더 
+                'pause' : 1000 // 시간
+            });
+
+            //slider2
+            $('.slider2').bxSlider({
+                'mode' : 'vertical',
+                'pager': false,     // 슬라이더 인디케이터
+                'controls': false,   // next prev 버튼 
+                'auto' : true, // 자동슬라이더 
+                'pause' : 2000, // 시간
+                'responsive' : false // 반응형 
+            });
+
+           //slider3
+           $('.slider3').bxSlider({
+               'minSlides' : 5, 
+               'maxSlides' : 9,
+               'slideMargin' : 10,
+               'slideWidth': 152,
+               'moveSlides': 1,
+               'auto' : true
+           });
+
+        });
+    </script>
+</head>
+<body>
+<h3>7-2. jQuery bxslider</h3> 
+
+<h4>slider1</h4>
+<ul class="slider1">
+    <li><img src="./img/1.jpg" alt="1"></li>
+    <li><img src="./img/2.jpg" alt="2"></li>
+    <li><img src="./img/3.jpg" alt="3"></li>
+</ul>   
+<hr>
+<h4>slider2</h4>
+<ul class="slider2">
+    <li><img src="./img/slider1.jpg" alt="slider1"></li>
+    <li><img src="./img/slider2.jpg" alt="slider2"></li>
+    <li><img src="./img/slider3.jpg" alt="slider3"></li>
+</ul>
+
+<h4>slider3</h4>
+<ul class="slider3">
+    <li><a href="#"><img src="./img/ci1.jpg" alt=""/></a></li>
+    <li><a href="#"><img src="./img/ci2.jpg" alt=""/></a></li>
+    <li><a href="#"><img src="./img/ci3.jpg" alt=""/></a></li>
+    <li><a href="#"><img src="./img/ci4.jpg" alt=""/></a></li>
+    <li><a href="#"><img src="./img/ci5.jpg" alt=""/></a></li>
+    <li><a href="#"><img src="./img/ci6.jpg" alt=""/></a></li>
+    <li><a href="#"><img src="./img/ci7.jpg" alt=""/></a></li>
+    <li><a href="#"><img src="./img/ci8.jpg" alt=""/></a></li>
+    <li><a href="#"><img src="./img/ci9.jpg" alt=""/></a></li>
+</ul>
+</body>
+</html>

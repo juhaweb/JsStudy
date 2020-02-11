@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>3-1 (07.08)</title>
+    <script src="js/jquery-3.4.1.js"></script>
+    <script>
+        //자바스크립트 방식
+        window.onload = function(){
+        var city = document.getElementById('city');
+        var li = city.getElementsByTagName('li');
+        li[1].style.color="#00f"
+        } 
+
+        //제이쿼리 방식
+        jQuery(document).ready(function(){
+
+            var li = jQuery('#city > li:nth-child(4)');
+            li.css('color','#0F0');
+        });
+
+        //제이쿼리 방식 축소! 이렇게 씀. 선택자 이해하기. 
+        $(function(){
+            $('#city > li:nth-child(4)').css('color','#F00');
+        });
+    </script>
+    
+</head>
+<body>
+    <h3>1.jQuery 이해하기 </h3>
+    
+    <ul id="city">
+        <li>서울</li>
+        <li>대전</li>
+        <li>대구</li>
+        <li>부산</li>
+        <li>광주</li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

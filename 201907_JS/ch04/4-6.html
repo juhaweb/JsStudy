@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <title>4-6 (07.10)</title>
+    <script>
+
+        $(document).ready(function(){
+            
+
+
+            // 태그(객체) 생성
+            $('<img/>').attr({'src':'./img/puppy1.png','alt':'강아지1'}).appendTo('body');
+            $('<a>네이버</a>').attr('href','http://naver.com').prependTo('body');
+
+            // 태그(객체) 제거
+            $('ul>li:eq(1)').remove();  // 대전. 태그(객체) 자체가 사라짐
+            $('ul>li:nth-child(2)').empty();    // 대구. 태그(객체) 내용만 재거. 
+            // == $('ul>li:nth-child(2)').text('');  같음. 
+
+            // $(순수 태그원형).~~~~~~~~~~~~
+        });
+
+
+    </script>
+
+
+</head>
+<body>
+    <h3>6. 제이쿼리 생성, 제거함수</h3>
+    <ul>
+        <li>서울</li>
+        <li>대전</li>
+        <li>대구</li>
+        <li>부산</li>
+        <li>광주</li>
+    </ul>
+</body>
+</html>

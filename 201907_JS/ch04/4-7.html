@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <title>4-7 (07.11)</title>
+    <script>
+        $(function(){
+
+            var count = 1;
+            
+            $('.add').click(function(){
+                count++;
+                $('.list').append('<li>item'+count+'</li>');
+            });
+
+            $('.sub').click(function(){
+                var i = count - 1;
+                count--;
+                $('.list').children().eq(i).remove();
+            });
+
+        });
+
+    </script>
+
+
+</head>
+<body>
+    <h3>7. 동적태그 생성 실습예제</h3>
+
+    <button class="add">추가</button>
+    <button class="sub">삭제</button>
+
+    <ul class="list">
+    </ul>
+
+</body>
+</html>

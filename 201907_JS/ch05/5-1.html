@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <title>5-1 (07.10)</title>
+    
+    <style>
+        .box{display:inline-block;width:100px;height:100px;border:5px solid darkcyan;background:cadetblue;box-sizing: border-box;font-weight:800;}
+    
+    </style>
+
+    <script>
+        $(document).ready(function(){
+            
+            // 제이쿼리 클릭함수 on('click',실행할 함수)  // === $('.box1').click(function(){}); 같다
+            $('.box1').on('click',function(){  
+                $(this).css('background','sandybrown');
+            });
+
+            // 세가지 동작 한방에.
+            $('.box2').on({
+                'click':function(){
+                    $(this).css('background','red');
+                },  // 클릭
+                'mouseenter':function(){
+                    $(this).css('background','green');
+                },  // 태그요소에 마우스가 들어갈 때
+                'mouseleave':function(){
+                    $(this).css('background','blue');
+                },  // 태그요소에 마우스가 빠져나올때
+            });  
+
+            // .on 뭐머할때. 
+            $('.box3').on({
+                'mousedown':function(){
+                    $(this).css('background','yellow');
+                },  // 태그요소를 커서로 누를 때
+                'mouseup':function(){
+                    $(this).css('background','orange');
+                },  // 태그요소를 클릭후 땟을때
+                'mousemove':function(){
+                    console.log('mousemove!!!');  
+                }   // 태그요소 안에서 마우스 움직일때 1px만 움직여도 반응함. 콘솔로 확인. 
+            });
+           
+        });
+
+    </script>
+</head>
+<body>
+    <h3>5-1. 제이쿼리 이벤트</h3>
+    <div class="box box1">box1</div>
+    <div class="box box2">box2</div>
+    <div class="box box3">box3</div>
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>6-4 (07.12)</title>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <style>
+        .box {position:absolute; left:20px;top:100px; width:200px; height:200px; background: salmon;}
+    
+    </style>
+    <script>
+    $(document).ready(function(){
+
+        var btnSlideUp   = $('button:eq(0)');
+        var btnSlideDown = $('button:eq(1)');
+        var btnStop      = $('button:eq(2)');
+        var btnClear     = $('button:eq(3)');
+        var box = $('.box');
+
+        // 슬라이드업
+        btnSlideUp.click(function(){
+            box.animate({'height':'0'},1000);
+        });
+
+        // 슬라이드 다운
+        btnSlideDown.click(function(){
+            box.animate({'height':'200px'},1000);
+        });
+        
+        // 현재 실행중인 애니메이션 종료 (Queue 타임라인內 다음 누적 애니메이션 실행)
+        btnStop.click(function(){
+            box.stop();
+        });
+        
+        // Queue 타임라인內 누적된 애니메이션을 모두 제거
+        btnClear.click(function(){
+            box.clearQueue();
+        });
+
+        // === box.stop().clearQuere(); 동일. 
+        // box.stop(ture) = 스탑+클리어. 
+        
+    });
+    </script>
+</head>
+<body>
+    <h3>6-4. 애니메이션 정지</h3>
+    <div>
+        <button>slideUp</button>
+        <button>slideDown</button>
+        <button>stop</button>
+        <button>clear</button>
+    </div>
+    <div class="box"></div>
+</body>
+</html>

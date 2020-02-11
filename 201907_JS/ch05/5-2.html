@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <title>5-2 (07.11)</title>
+    <style>
+    .box {display:inline-block;margin:10px;width:100px;height:100px;border:4px solid salmon;}
+    </style>
+    <script>
+        $(document).ready(function(){
+
+            // 클릭
+            $('.box1').click(function(){
+                $(this).css('background','#F00');
+            });
+
+            // 누를때
+            $('.box2').mousedown(function(){
+                $(this).css('background','#0F0');
+            });
+
+            // 누르고 땔때
+            $('.box3').mouseup(function(){
+                $(this).css('background','#00F');
+            });
+
+            // 박스안에서 이동(콘솔로 출력)
+            $('.box4').mousemove(function(){
+                console.log('mousemove!!!');
+            });
+
+            // 박스에 들어갈때
+            $('.box5').mouseenter(function(){
+                $(this).css('background','#FF0');
+            });
+
+            // 박스에 들어갔다가 나올때
+            $('.box6').mouseleave(function(){
+                $(this).css('background','#0FF');
+            });
+
+            $('.box7').hover(function(){ //mouseenter
+                $(this).text('들어옴').css('background','#FF0');
+            },function(){ //mouseleave
+                $(this).text('나감').css('background','#0FF');               
+            });
+
+        });
+    </script>
+</head>
+<body>
+    <h3>5-2. 제이쿼리 이벤트 단축함수</h3>
+    <div class="box box1">click</div>
+    <div class="box box2">mousedown</div>
+    <div class="box box3">mouseup</div>
+    <div class="box box4">mousemove</div>
+    <div class="box box5">mouseenter</div>
+    <div class="box box6">mouseleave</div>
+    <div class="box box7">hover</div>
+
+</body>
+</html>

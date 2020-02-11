@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>2-2(07.02)</title>
+</head>
+<body>
+    <h3>2. 연산자 (교재237p~)</h3>
+    <script>
+
+        //대입연산자
+        var num1 = 1;
+        var num2 = 2;
+        var num3 = 3, num4 = 4;
+
+        //사칙연산자
+        var r1 = num1 + num2;
+        var r2 = num1 - num2;
+        var r3 = num2 * num3; 
+        var r4 = num4 / num2; //나눗셈. 몫
+        var r5 = num4 % num3; //나머지값
+
+        document.write('사칙연산자<br/>')
+        document.write('r1:'+r1+'<br/>')
+        document.write('r2:'+r2+'<br/>')
+        document.write('r3:'+r3+'<br/>')
+        document.write('r4:'+r4+'<br/>')
+        document.write('r5:'+r5+'<br/><br/>')
+
+        //증가,감소연산자 : 앞뒤 위치 상관없음.
+        num1++;
+        ++num1;
+        num2--;
+        --num2;
+
+        document.write('증감연산자<br/>')
+        document.write('num1 : '+num1+'<br/>')
+        document.write('num2 : '+num2+'<br/><br/>')
+
+        //복합대입연산자
+        var n1 = 1, n2 = 2, n3 = 3, n4 = 4;
+
+        n1 += 2; // n1 = n1 + 2
+        n2 -= 3; // n2 = n2 - 3
+        n3 *= 4; // n3 = n3 * 4
+        n4 /= 5; // n4 = n4 / 5
+
+        document.write('복합대입연산자<br/>')
+        document.write('n1 : '+n1+'<br/>');
+        document.write('n2 : '+n2+'<br/>');
+        document.write('n3 : '+n3+'<br/>');
+        document.write('n4 : '+n4+'<br/><br/>');
+
+        //비교연산자
+        var no1 = 1;
+        var no2 = 2;
+        var no3 = 3;
+        var no4 = 4;
+
+        var rs1 = (no1 == no2);     // 같은지 비교
+        var rs2 = (no1 != no2);     // 다른지 비교
+        var rs3 = (no1 > no2);      // no1이 no2보다 큰가?
+        var rs4 = (no1 < no2);      // no1이 no2보다 작은가?
+        var rs5 = no1 >= no2;       // no1이 no2보다 크거나 같은가?
+        var rs6 = no1 <= no2;       // no1이 no2보다 작거나 같은가?
+
+        document.write('비교연산자<br/>')
+        document.write('rs1 : '+rs1+'<br/>')
+        document.write('rs2 : '+rs2+'<br/>')
+        document.write('rs3 : '+rs3+'<br/>')
+        document.write('rs4 : '+rs4+'<br/>')
+        document.write('rs5 : '+rs5+'<br/>')
+        document.write('rs6 : '+rs6+'<br/><br/>')
+
+        //논리연산자 &&=그리고and ||=또는or !=not부정
+        var res1 = (no1 > 1) && (no2 > 2);      // no1이 1보다 크고 그리고(&&) no2가 2보다 크다.
+        var res2 = (no1 < 2) && (no2 > 3);      // no1이 2보다 작고 그리고(&&) no2가 3보다 크다.
+        var res3 = (no1 >= 1) && (no2 > 1);     // no1이 1보다 크거나 같고 그리고(&&) no2가 1보다 크다.
+        var res4 = (no2 > 3) || (no3 > 2);      // no2가 3보다 크고 또는(||) no3이 2보다 크다.
+        var res5 = (no2 > 2) || (no3 > 5) ;     // no2가 2보다 크고 또는(||) no3이 5보다 크다. 
+        var res6 = !(no4 > 5);                  // no4는 5보다 크지 않다.(!not)
+
+        document.write('논리연산자<br/>')
+        document.write('res1:'+res1+'<br/>')
+        document.write('res2:'+res2+'<br/>')
+        document.write('res3:'+res3+'<br/>')
+        document.write('res4:'+res4+'<br/>')
+        document.write('res5:'+res5+'<br/>')
+        document.write('res6:'+res6+'<br/>')
+    
+    </script>
+</body>
+</html>

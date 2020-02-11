@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>6-6. (07.15)</title>
+    <style>
+    * {margin:0;padding:0;list-style:none;}
+    .container {margin:10px auto;width:895px;}
+    ul { width:100%; height:48px;}
+    ul > li {float:left; width:20%; height:100%;}
+    ol {display:none;width:100%;}
+    ol > li {width:100%; height:48px;}
+    a {display:block; width:100%; height:100%;background-image:url('./img/btn.png'); color:#cfdfb5; font-weight:bold; text-decoration:none; line-height:48px; text-indent:30px;}
+    a:hover {background-image:url('./img/btn_over.png');}
+
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        
+        $(document).ready(function(){
+
+            $('ul > li ').hover(function(){
+                $(this).children().eq(1).stop().slideDown(500);
+                // $(this).find('ol').eq(1).stop().slideDown(500);
+                },function(){
+                $(this).children().eq(1).stop().slideUp(500);                
+            })
+        });
+    
+      
+    </script>
+
+
+</head>
+<body>
+    <h3>6-6. 애니메이션 - 드롭다운 메뉴</h3>
+    <div class="container">
+        <ul>
+            <li>
+                <a href="#">menu1</a>
+                <ol>
+                <li><a href="#">menu1-1</a></li>
+                <li><a href="#">menu1-2</a></li>
+                <li><a href="#">menu1-3</a></li>
+                <li><a href="#">menu1-4</a></li>
+                </ol>
+            </li>
+            <li>
+                <a href="#">menu2</a>
+                <ol>
+                <li><a href="#">menu2-1</a></li>
+                <li><a href="#">menu2-2</a></li>
+                <li><a href="#">menu2-3</a></li>
+                <li><a href="#">menu2-4</a></li>
+                </ol>
+            </li>
+            <li>
+                <a href="#">menu3</a>
+                <ol>
+                <li><a href="#">menu3-1</a></li>
+                <li><a href="#">menu3-2</a></li>
+                <li><a href="#">menu3-3</a></li>
+                <li><a href="#">menu3-4</a></li>
+                </ol>
+            </li>
+            <li>
+                <a href="#">menu4</a>
+                <ol>
+                <li><a href="#">menu4-1</a></li>
+                <li><a href="#">menu4-2</a></li>
+                <li><a href="#">menu4-3</a></li>
+                <li><a href="#">menu4-4</a></li>
+                </ol>
+            </li>
+            <li>
+                <a href="#">menu5</a>
+                <ol>
+                <li><a href="#">menu5-1</a></li>
+                <li><a href="#">menu5-2</a></li>
+                <li><a href="#">menu5-3</a></li>
+                <li><a href="#">menu5-4</a></li>
+                <li><a href="#">menu5-5</a></li>
+                </ol>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

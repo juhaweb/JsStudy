@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3-2 (07.08)</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+
+        //style 랜더링 하고, script 프로그래밍 실행. 
+
+        $(function(){
+            // 전체 선택자
+            $('*').css('color','blue'); // 모든태그의 스타일을 바꿈.
+            
+            // 태그 선택자
+            $('li').css('color','yellow'); 
+            
+            // 클래스 선택자
+            $('.dj,.dg').css('color','red'); 
+
+            // 아이디 선택자
+            $('#se').css('color','purple')
+
+        });
+    
+    
+
+    
+    </script>
+
+</head>
+<body>
+    <h3>2.jQuery 기본 선택자</h3>
+    <ul>
+        <li id="se">서울</li>
+        <li class="dj">대전</li>
+        <li class="dg">대구</li>
+        <li>부산</li>
+        <li>광주</li>
+    </ul>
+    
+
+<!--
+    https://developers.google.com/speed/libraries/
+    구글 제이쿼리 라이브러리. 
+-->
+
+</body>
+</html>

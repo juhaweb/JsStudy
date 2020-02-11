@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>2-4-2(07.03)</title>
+</head>
+<body>
+    <h3>4.반복문 while. do-whild. break, continue</h3>
+    <script>
+        // ★while (~동안)
+        var total = 0;
+        var start = 1;
+
+        while( start <= 10 ){
+            total += start;  // total + total = start;
+            start++;
+        }
+        document.write('1부터 10까지의 합 :' +total+ '<br/><br/>');
+
+
+
+        // ★do ~ while (do에서 한번 실행하고, while에서 반복할지안할지 재검사)
+        var oddSum = 0;
+        var begin = 1;
+
+        do{
+            if(begin%2 == 1){
+                oddSum += begin;
+            }
+
+            begin++;
+
+        } while(begin <=10 );
+            document.write('1부터 10까지의 홀수합:'+oddSum+'<br/><br/>');
+
+
+
+        // ★ break 브레이크!! 
+
+            /* 여러줄 주석
+            whlie(true){   while 문의 조건을 실행한다 = 무한루프
+                if(조건){
+                break; 반복문 탈출
+                }
+             }
+            */
+        
+        document.write('<b>break</b><br/>');
+        var num = 1;
+
+        while(true){
+            if(num%5 == 0 && num%7 == 0) {  // num을 5로 나눠서 0이고 7로 나눴을때 0일때 
+                break; //반복문 탈출
+            }
+            ++num;
+        }
+        document.write('5와 7의 최소공배수 :' +num+'<br/><br/>');
+
+
+
+        /* continue 컨티뉴  여기 문제가있어 !!! 
+
+        var evenSum = 0;
+        for(var i=1; 1<=10; i++){
+
+            if( i%2 == 1 ){   //i를 2로 나눴을때 나머지가 1이다 = 홀수다
+                continue; 
+            }
+
+            evenSum += i;
+
+        }
+        document.write('1부터 10까지의 짝수합:'+evenSum+'<br/>');   
+        */
+
+
+    </script>
+
+
+</body>
+</html>

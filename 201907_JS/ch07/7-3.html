@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>7-3 (07.16)</title>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="./css/lightbox.css"/>
+    <link rel="stylesheet" href="./css/lity.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="./js/lightbox.js"></script>
+    <script src="./js/lity.js"></script>
+    <script>
+        $(function(){
+        
+          lightbox.option({
+          'resizeDuration': 200,
+          'wrapAround': false
+          })
+
+        });
+    </script>
+</head>
+<body>
+    <h3>7-3. lightbox plugins</h3>
+    
+    <h4>lokeshdhakar</h4>
+    <ul>
+        <li><a href="./img/ci1.jpg" data-lightbox="samsung">삼성</a></li>
+        <li><a href="./img/nature1.jpg" data-lightbox="네이쳐">Nature1</a></li>
+        <li><a href="./img/nature2.jpg" data-lightbox="네이쳐">Nature2</a></li>
+        <li><a href="./img/nature3.jpg" data-lightbox="네이쳐">Nature3</a></li>
+        <li><a href="./img/nature4.jpg" data-lightbox="네이쳐">Nature4</a></li>
+    </ul>
+
+    <h4>lity- youtube. </h4>
+    <ul>
+        <li><a href="https://www.youtube.com/watch?v=0Wo01YxHyTE" data-lity>Youtube</a></li>
+        <li><a href="7-2.html" data-lity>HTML</a></li>
+    </ul>
+    
+</body>
+</html>
+
+<!-- 
+    https://lokeshdhakar.com/projects/lightbox2/
+    라이트박스 라이브러리. 
+    
+    https://sorgalla.com/lity/
+    얘가 더 좋음. 영상이나 폼 들어감.     
+
+-->

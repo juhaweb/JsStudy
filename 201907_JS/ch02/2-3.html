@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>2-3(07.02)</title>
+</head>
+<body>
+    <h3>3.조건문</h3>
+    <script>
+    // if
+    var num1 = 1, num2 = 2; //변수 두개를 선언(생성)합니다. 한줄에요. 
+    
+    if(num1 > 0){  //상황에 따라 실행하거나 건너뜀 if
+        document.write('num1이 0보다 크다. <br/>'); 
+    }
+
+    if(num1 > 0){
+        if(num2 > 1){
+            document.write('num1은 0보다 크고 그리고 num2는 1보다 크다. <br/>');
+        }
+    }
+
+    if(num1 > 0 && num2 > 1){
+        document.write('num1은 0보다 크고 그리고 num2는 1보다 크다. <br/>');
+    }
+
+    // if ~ else //if조건이 거짓일 경우 else가 실행됨.
+    var num3 = 3;
+    var num4 = 4;
+
+    if(num3 > num4){
+        document.write('num3이 num4보다 크다. <br/>'); 
+    }else{
+        document.write('num3이 num4보다 작다. <br/>');
+    }
+
+    // if ~ else if ~ else ======== if가 거짓일 경우 다음 else 실행
+    if(num1 > num2){
+        document.write('num1이 num2보다 크다. <br/>')
+    }else if(num2 > num3){
+        document.write('num2이 num3보다 크다. <br/>')
+    }else if(num3 > num4){
+        document.write('num3이 num4보다 크다. <br/>')
+    }else{
+        document.write('num4가 가장 크다 <br/>')
+    }
+
+    // switch
+    var n = prompt('1~5 사이의 숫자를 입력하세요.');
+
+    switch(n){
+        case '1' :
+            document.write('1입니다.<br/>');
+            break;
+        case '2' :
+            document.write('2입니다.<br/>');
+            break;
+        case '3' :
+            document.write('3입니다.<br/>');
+            break;
+        default :
+            document.write('잘못 입력하셨습니다.<br/>');
+            break;
+    }   
+    
+    </script>
+    
+    <hr>
+    <h4>연습문제</h4>
+    <script>
+        var score = 86;
+        if(score >=90 && score <=100){
+            // 90~100
+            document.write('A입니다.<br/>')
+        }else if(score >=80 && score < 90){
+            // 80~89
+            document.write('B입니다.<br/>')
+        }else if(score >=70 && score < 80){
+            // 70~79
+            document.write('C입니다.<br/>')
+        }else if(score >=60 && score < 70){
+            // 60~69
+            document.write('D입니다.<br/>')
+        }else{
+            // 0~59
+            document.write('E입니다.<br/>')
+        }
+    </script>
+    
+</body>
+</html>
+
