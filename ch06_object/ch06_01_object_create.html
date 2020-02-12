@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>ch6.1-3</title>
+</head>
+<body>
+    <h3>6.1 객체 생성</h3>
+    <script>
+        // 객체 생성
+        var product = {
+            제품명 : '건조 망고',
+            유형 : '당절임',
+            성분 : '망고, 설탕, 외 다수',
+            원산지 : '필리핀'
+        };
+
+        // 문자열을 키로 사용
+        var object = {
+            키 : 값,
+            'with space': 273,
+            'with ~!@# $%^&*()_+': 52
+        };
+        
+        
+
+    </script>
+    <hr>
+    
+    <h3>6.2 속성과 메서드</h3>
+    <script>
+        // 객체의 속성이 가질 수 있는 자료형
+        var object ={
+            number : 273,
+            string : 'RintIanTta',
+            boolean: true,
+            arra : [52, 273, 103, 32],
+            method : function(){
+            }
+        };
+    </script>
+    <hr>
+    <script>
+        // 속성과 메서드의 구분
+        var person ={
+            name:'이름',
+            eat:function(food){}
+        };
+        // 메서드 호출
+        person.eat();
+    </script>
+    <script>
+        // this 키워드
+        var person = {
+            name:'홍길동',
+            eat_a : function(food){
+                document.write(this.name+'이 '+food+' 를 먹습니다.<br>');
+            },
+            eat_b : (food) => { // this키워드 사용하고싶으면 => 키워드 사용하면 안됨. 
+                document.write(this.name+'이 '+food+' 을 먹습니다.<br>')
+            } 
+        };
+        // 메서드 호출
+        person.eat_a('밥');
+        person.eat_a('뭐든');
+        person.eat_b('반찬');
+
+    </script>
+    <hr>
+
+    <h3>6.3 객체와 반복문</h3>
+    <script>
+        //객체와 반복문
+        var product ={
+            name : 'Microsoft Visual Code',
+            price : '15,000,000원',
+            language : '다국어',
+            supportOs : 'windows / Mac / Linux',
+            subscription : true
+        };
+        var output = '';
+        for (var key in product){
+            output +='★'+key+' : '+product[key] + '<br>';
+        }
+        document.write(output);
+    </script>
+    <hr>
+
+</body>
+</html>

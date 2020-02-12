@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>ch6.4-</title>
+</head>
+<body>
+    <h3>6.4 객체 관련 키워드</h3>
+    <script>
+        // 변수 선언
+        var output = '';
+        var student = {
+            이름 : '홍길동',
+            국어 : 92,
+            수학 : 94,
+            영어 : 96,
+            과학 : 98
+        };
+
+        // in 키워드 사용
+        output += "'이름' in student: " + ('이름' in student) + '<br>';
+        output += "'성별' in student: " + ('성별' in student) + '<br>';
+        document.write(output);
+
+        // in 식별자로 사용시
+        var key = "국어";
+        document.write(key in student);
+
+    </script>
+    <hr>
+
+    <script>
+        // 변수 선언
+        var student = {
+            이름 : '홍길동',
+            국어 : 92,
+            수학 : 94,
+            영어 : 96,
+            과학 : 98
+        };
+
+        // with 키워드 사용안함 - 출력
+        var output = '';
+        output += '이름 : ' + student.이름 + '<br>';
+        output += '국어 : ' + student.국어 + '<br>';
+        output += '총점 : ' + (student.국어 + student.수학 + student.영어 + student.과학) + '<br>';
+        document.write(output);
+
+        // with 키워드 사용
+        var output2='';
+        with (student){
+            output2 += '이름 : ' + 이름 + '<br>';
+            output2 += '국어 : ' + 국어 + '<br>';
+            output2 += '총점 : ' + (국어 + 수학 + 영어 + 과학) + '<br>';
+            };
+        document.write(output2);
+
+    </script>
+    <p>
+        with(객체){
+            코드
+        }
+    </p>
+    
+</body>
+</html>
