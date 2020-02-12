@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>ch5.7-</title>
+</head>
+<body>
+    <h3>5.7 내부함수</h3>
+    <script>
+        // 피타고라스의 정리 함수를 구해보겠다. 
+        
+        // 일단 만들어보겠음. 
+        function square(x) {
+            return x * x; //제곱근 구함
+        }
+
+        function pythagoras(width, height){
+        //  return Math.sqrt(width*width + height*height); 제곱근을 구할수 있으니 아래와 같이 바꿀거야. 
+            return Math.sqrt(square(width) + square(height));
+        }
+        document.write('pythagoras(3,4) : '+pythagoras(3,4));
+
+    </script>
+    <hr>
+
+    <script>
+        //내부함수를 사용해 정리 (내부함수 우선 사용)
+        function pythagoras(width, height) {
+            function square(x) {
+                return x * x;
+            }
+            return Math.sqrt(square(width) + square(height));
+        }
+        document.write('pythagoras(3,4) : '+pythagoras(3,4));
+    </script>
+    
+</body>
+</html>

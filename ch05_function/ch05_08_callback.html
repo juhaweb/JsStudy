@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>ch5.8-10</title>
+</head>
+<body>
+    <h3>5.8 콜백함수</h3>
+    <script>
+        function callTenTimes(callback){
+            //10회반복
+            for(var i=0; i<10; i++){
+                // 매개변수로 전달된 함수호출
+                callback();
+            }
+        }
+
+        var callback = function(){
+            document.write('함수호출<br>');
+        };
+
+        // 함수를 호출합니다. 
+        callTenTimes(callback);
+        
+    </script>
+    <hr>
+
+    <h3>5.9 함수를 리턴하는 함수</h3>
+    <script>
+        function returnFunction(){
+            return function(){
+                document.write('hello function!!!');
+            };
+        }
+        // 함수호출
+        returnFunction()(); // <-여기 괄호두개.. 함수가 리턴되므로 한번 더.
+        
+    </script>
+    <hr>
+
+    <h3>5.10 클로저</h3>
+    <script>
+        function test(name) {
+            var output = 'Hello ' + name + ' .. !';
+            return function(){
+                document.write(output);        
+            };
+        }
+        test('출력합니다')();
+        
+    </script>
+    <hr>
+    <script>
+        // 클로저2
+        function test(name) {
+            var output = 'Hello ' + name + ' .. !';
+            return function () {
+                document.write(output);
+            };
+        }
+
+        // 변수선언
+        var test_1 = test('Web');
+        var test_2 = test('JavaScript');
+
+        // 함수호출
+        test_1();
+        test_2();
+    </script>
+</body>
+</html>
