@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <title>2-6. 객체</title>
+  <script src="./js/Account.js"></script>
+</head>
+<body>
+  <h3> 6. 객체 </h3>
+  <script>
+  
+    // 객체 생성
+    var kb = new Account('국민은행', '012-012-01235', '김유신', 10000);
+    kb.deposit(51124121); 
+    kb.withdraw(54633);
+    kb.info();
+    
+    var wr = new Account('국민은행', '012-012-012334634', '김춘추', 50000);
+    wr.deposit(554212845); 
+    wr.withdraw(63846343);
+    wr.info();
+  
+  </script>
+
+</body>
+</html>
