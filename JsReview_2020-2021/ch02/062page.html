@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>숫자 입력</title>
+</head>
+<body>
+    <script>
+        var input = prompt('숫자입력','숫자');
+        document.write(typeof(input));
+        // 숫자를 입력해도 문자로나옴.
+
+        document.write('<hr>');
+
+        // Number() 함수를 사용해 문자열 -> 숫자 자료형으로 인식
+        var numberInput = Number(input);
+        document.write(typeof(numberInput));
+
+        document.write('<hr>');
+
+        // 복소수 표현불가 (NaN)
+        var number = Math.sqrt(-3);
+        document.write(number);
+
+    </script>
+</body>
+</html>
