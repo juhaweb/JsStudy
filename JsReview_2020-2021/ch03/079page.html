@@ -18,13 +18,35 @@
         var date = new Date();
         var hour = date.getHours();
 
+        document.write("<br>"+date);
+
         if(hour < 12){
-            document.write("<br> 오전입니다.");
+            document.write("<br>"+hour+"시 오전입니다.");
         };
-        if(hour > 12){
-            document.write("<br> 오후입니다.");
+        if(hour >= 12){
+            document.write("<br>"+hour+"시 오후입니다.");
         };
 
+        // DATE 객체의 메서드
+        document.write("<hr>");
+
+        var day = date.getDay();
+        document.write("day : "+day+"<br>");
+
+        var month = date.getMonth();
+        document.write("month : "+ (month+1) +"<br>");
+
+        var year = date.getFullYear();
+        document.write("year : "+year+"<br>");
+
+        var minu = date.getMinutes();
+        document.write("min : "+minu+"<br>");
+
+        var sec = date.getSeconds();
+        document.write("sec : "+sec+"<br>");
+
+        
+        
 
     </script>
 </body>
