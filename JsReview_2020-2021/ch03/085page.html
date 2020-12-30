@@ -43,13 +43,10 @@
 
     <h4>문제3 : 국어, 영어, 수학 점수를 입력받아 평균을 구한 뒤 수우미양가를 구분하는 프로그램.</h4>
     <script>
-        var inputKo = prompt("국어 점수를 입력하세요.","국어점수");
-        var inputEn = prompt("영어 점수를 입력하세요.","영어점수");
-        var inputMa = prompt("수학 점수를 입력하세요.","수학점수");
-        
-        var scoreKo = Number(inputKo);
-        var scoreEn = Number(inputEn);
-        var scoreMa = Number(inputMa);
+
+        var scoreKo = Number(prompt("국어 점수를 입력하세요.","국어점수"));
+        var scoreEn = Number(prompt("영어 점수를 입력하세요.","영어점수"));
+        var scoreMa = Number(prompt("수학 점수를 입력하세요.","수학점수"));
 
         var numAvg = (scoreKo+scoreEn+scoreMa)/3
         
@@ -57,7 +54,7 @@
 
         if(numAvg >= 90){
             document.write("수 입니다.");
-        } else if(numAvg >= 80){
+        }else if(numAvg >= 80){
             document.write("우 입니다.");
         }else if(numAvg >= 70){
             document.write("미 입니다.");

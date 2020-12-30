@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>연습문제</title>
+</head>
+<body>
+    
+    <h1>93page 조건문 연습문제</h1>
+    <hr>
+
+
+    <h4>문제1.</h4>
+    <script>
+
+        // 안녕 -> 안녕하세요 // 잘자 , 잘 자 -> 안녕히 주무세요!
+        var input = prompt('문자열을 입력하세요.','문자열');
+
+        var hello = input.indexOf('안녕');
+        var night = input.indexOf('잘자');
+        var night2 = input.indexOf('잘 자');
+        
+        switch(true){
+            case hello == 0 :
+                document.write('안녕하세요!');
+                break;
+            case night == 0 :
+                document.write('안녕히 주무세요!');
+                break;
+            case night2 == 0 :
+                document.write('안녕히 주무세요!!');
+                break;
+            default:
+                document.write('규칙에 어긋남');
+                break;
+        }
+
+    </script>
+
+
+    <h4>문제2.</h4>
+    <script>
+
+        // 안녕 -> 안녕하세요 , 다른말 -> 인사를안하다니!!
+        var input = prompt('문자열을 입력하세요','문자열');
+        var str = input.indexOf('안녕');
+
+        switch(true){
+            case str == 0 :
+                document.write('안녕하세요!');
+                break;
+            case str != 0 :
+                document.write('인사를 안하다니!!!');
+                break;
+            default:
+                break;
+        }
+
+    </script>
+
+
+    <h4>문제3.</h4>
+    <script>
+
+        // 4로 나눌수있을까?
+        var int = Number(prompt('숫자를 입력하세요.','숫자'));
+
+        switch(true){
+            case int % 4 == 0:
+                document.write('4로 나눌수 있는 숫자입니다.');
+                break;
+            case int % 4 != 0:
+                document.write('4로 나눌수 없어요');
+                break;
+            default:
+                break;            
+        }
+
+    </script>
+
+    
+    <h4>문제4.</h4>
+    <script>
+
+        var num = Number(prompt("숫자를 입력하세요.","숫자"));
+        document.write("입력한숫자 : "+num);
+
+        if(num == 0){
+            document.write(" => 0 입니다.");
+        }else if(num % 2 == 1){
+            document.write(" => 홀수입니다.");
+        }else if(num % 2 == 0){
+            docuement.write(" => 짝수입니다.");
+        }
+
+
+    </script>
+
+
+
+</body>
+</html>
