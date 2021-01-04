@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반복문</title>
+</head>
+<body>
+    <h4>반복문 시작</h4>
+    <script>
+        for (var i=0; i<10; i++){
+            document.write('반복'+(i+1)+'<br>');
+        }
+
+    </script>
+    <h4>배열</h4>
+    <script>
+
+        var array = [23,353,366,924,874];
+        array.push(523);
+        array.push(734);
+        array.push(33);
+
+        document.write(array);
+
+        document.write('<br>0번째 요소 : '+array[0]);
+        document.write('<br>1번째 요소 : '+array[1]);
+        document.write('<br>5번째 요소 : '+array[5]);
+
+        document.write('<br> 모두 몇개의 요소가 있나? : '+array.length);
+
+        // 요소에 접근하는 방법
+        var array2 = [273, 'String', true, function () { }, {}, [273, 103]];
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>while 반복문</title>
+</head>
+<body>
+    <h4>while 반복문</h4>
+    <script>
+        
+        var value = 0;
+        while(value < 5){
+            document.write('<br>'+value +'번째 반복');
+            value++;
+        }
+
+    </script>
+
+    <h4>코드 4-8 외부에서 조건 변경후 반복문 빠져나감. </h4>
+    <script>
+
+        var value = 0;
+        var startTime = new Date().getTime();
+
+        // while 반복문: 현재 시각을 변수 startTime에 저장하고 1초후 반복문 종료 
+        while(new Date().getTime() < startTime + 1000){
+            value++;            
+        }
+        document.write(value);
+
+    </script>
+
+    <h4>do while 반복문</h4>
+    <script>
+
+        var value = 0;
+
+        do{
+            document.write(value+'번째 반복 <br>');
+            value++;
+
+        }while(value < 5);
+
+    </script>
+
+</body>
+</html>
