@@ -9,16 +9,43 @@
     <h4>for 반복문</h4>
     <script>
         var array = ['포도','사과','배','바나나','망고'];
-
         for (var i=0; i < array.length; i++){
             document.write(array[i]+'<br>');
         }
     </script>
 
+
+    <h4>역 for 반복문</h4>
+    <script>
+        var array = ['포도','사과','배','바나나','망고'];
+        for (var i=array.length-1; i>=0; i--){
+            document.write(array[i]+'<br>');
+        };
+    </script>
+
+
+    <h4>for 반복문의 특이한 사용법</h4>
+    <script>
+        var startTime = new Date().getTime();
+        for (var cps = 0; new Date().getTime() < startTime + 100; cps++){
+            document.write('초 당 연산 횟수 : '+cps);
+        };
+    </script>
+
+
+    <h4> for in </h4>
+    <script>
+        // for in 반복문 (단순 for 반복문과 동일)
+        // for (var k in array){}
+        // for (var k = 0; k < array.length; k++){}
+
+        var array = ['포도','사과','배','바나나','망고'];
+        for (var i in array) {
+            document.write(array[i]+'<br>');
+        }
+    </script>
+
     
-
-
-
 
 </body>
 </html>

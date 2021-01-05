@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>중첩 반복문</title>
+</head>
+<body>
+    <h4>중첩 반복문1</h4>
+    <script>
+
+        // 변수 선언
+        var output = '';
+        
+        // 중첩 반복문
+        for(var i=0; i<10; i++){
+            for (var j=0; j<i; j++){
+                output +='★';
+            };
+            output +='<br>';
+        };
+        document.write(output);
+
+    </script>
+
+    <h4>트리 만들기</h4>
+    <script>
+        var output ='';
+        for (var i=0; i<15; i++){
+            for (var j=15; j>i; j--){
+                output +='　';
+            };
+            for (var k=0; k<2*i; k++){
+                output +='★';
+            };
+            output +='<br>'
+        };
+        document.write(output);
+    </script>
+
+    
+</body>
+</html>

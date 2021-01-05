@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>break</title>
+</head>
+<body>
+    <h4>break</h4>
+    <script>
+        // 반복문
+        for (var i=0; true; i++){
+            document.write(i+'번째 반복문입니다.<br>');
+
+            // 진행 여부를 물어봅니다. 
+            if (!confirm(i+'계속하시겠습니까?')){
+            break;
+            };
+        };
+        document.write('프로그램 종료');
+    
+    </script>
+
+    <h4>continue 1</h4>
+    <script>
+        for (var i=0; i<5; i++){
+            continue;
+            document.write(i); // 아무것도 안나옴. 
+        };
+    </script>
+
+    <h4>continue 2</h4>
+    0부터 10까지 짝수의 합 : 
+    <script>
+        //변수선언
+        var output=0;
+
+        //반복문
+        for (var i=1; i<=10; i++){
+            //조건문
+            if(i % 2==1){
+                // 홀수일 경우 반복중지.
+                continue;
+            }
+            output+=i;
+        };
+        document.write(output);
+
+    </script>
+
+    <hr>
+    break 키워드나 continue 키워드는 반복문의 조건식을 적절하게 만들면 사용 할 필요가 없으니 사용을 최대한 자제할것. 
+</body>
+</html>
