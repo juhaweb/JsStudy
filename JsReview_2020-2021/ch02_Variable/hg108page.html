@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>연산자 활용</title>
+</head>
+<body>
+    <h4>복합대입 연산자 활용</h4>
+    <script>
+
+        // 변수 list 선언
+        let list ='';
+
+        // 연산자 사용
+        list += '<ul>';
+        list += '<li>list1</li>';
+        list += '<li>list2</li>';
+        list += '</ul>';
+
+        // 문서에 출력
+        document.write(list);
+
+        // 복합대입 연산자를 사용하지 않은 경우
+        const list2 = '<ul><li>Hello</li><li>Javascript</li></ul>';
+        document.write(list2);
+        
+        // 상수를 사용하지 않고 문서에 출력
+        document.write('<ul><li>Hello</li><li>Javascript</li></ul>');
+        
+    </script>
+
+    <h4>증감 연산자</h4>
+    <script>
+        // 변수를 선언
+        let number = 10;
+        number ++;
+        document.write(number);
+
+        let number2 = 10;
+        document.write('<br>' + number2++);
+        document.write('<br>' + number2++);
+        document.write('<br>' + number2++);
+        document.write('<br>' + number2); number2 +=1;
+        document.write('<br>' + number2);
+        document.write('<br>' + ++number2);
+        document.write('<br>' + --number2);
+        document.write('<br>' + number2--);
+        document.write('<br>' + number2);
+        number2--;
+        number2--;
+        document.write('<br>' + number2);
+
+    </script>
+</body>
+</html>
