@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h4>조건부 연산자 사용하기.</h4>
+  <script>
+    const number = Number(prompt('숫자를 입력하세요','숫자'));
+    const result = (number >=0) ? '0 이상의 숫자입니다.' : '0보다 작은 숫자입니다.'
+    document.write(result);
+
+  </script>
+
+<h4>논리합 연산자.</h4>
+<script>
+  // 좌변이 true일경우 우변 실행안함. 
+  true || document.write('실행될까요?1')
+  
+  // 좌변이 false일경우 우변 실행. 
+  false || document.write('실행될까요?2')
+
+</script>
+
+<h4>논리곱 연산자.</h4>
+<script>
+  // 좌변이 true일경우 우변 실행. 
+  true && document.write('실행될까요?3')
+  
+  // 좌변이 false일경우 우변 실행안함. 
+  false && document.write('실행될까요?4')
+
+</script>
+  
+</body>
+</html>

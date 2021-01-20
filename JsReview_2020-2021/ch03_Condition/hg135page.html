@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>중첩조건문</title>
+</head>
+<body>
+  <h4>중첩 조건문으로 시간 파악하기. </h4>
+  <script>
+    const date = new Date();
+    const hour = date.getHours();
+
+    if(hour<11){
+      document.write('아침 먹을 시간입니다.');
+    }else{
+      if(hour<15){
+        document.write('점심 먹을 시간입니다.');
+      }else{
+        document.write('저녁 먹을 시간입니다.');
+      }
+    }
+  </script>
+  <h4>if else if 조건문</h4>
+  <script>
+    if (hour<11){
+      document.write('아침 먹을 시간입니다.');
+    }else if(hour<15){
+      document.write('점심 먹을 시간입니다.');
+    }else{
+      document.write('저녁 먹을 시간입니다.');
+    }
+  </script>
+  
+</body>
+</html>

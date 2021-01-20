@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h4>switch 조건문 사용하기.</h4>
+  <script>
+    const input = Number(prompt('숫자를 입력하세요','숫자'));
+    switch(input % 2){
+      case 0:
+        document.write('짝수입니다.');
+        break
+      case 1:
+        document.write('홀수입니다.');
+        break
+      default:
+        document.write('숫자가 아닙니다.');
+        break
+    }
+  </script>
+  
+  <h4> if 조건문을 switch 조건문으로 변환하기. </h4>
+  <script>
+    const date = new Date();
+    const hour = date.getHours();
+
+    switch (true){
+      case hour < 11:
+        document.write('아침 먹을 시간입니다.');
+        break
+      case hour < 15:
+        document.write('점심 먹을 시간입니다.');
+        break
+      default :
+        document.write('저녁 먹을 시간입니다.');
+        break
+    }
+    
+  </script>
+</body>
+</html>
