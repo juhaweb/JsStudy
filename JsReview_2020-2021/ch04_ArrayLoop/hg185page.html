@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>continue 키워드</title>
+</head>
+<body>
+  <h4>continue 키워드 활용 1</h4>
+  <script>
+    for (let j=0; j<5; j++){
+      //현재 반복 작업을 중지하고 다음 반복 작업 수행
+      continue
+      document.write(j); // 이거출력 안함. continue 바로 다음 반복작업으로 넘어감. 
+    }
+  </script>
+
+  <h4>continue 키워드 활용 2 </h4>
+  <script>
+    let output = 0;
+
+    for (let i=1; i<=10; i++){
+      if( i % 2 === 1 ){
+        continue // 홀수일경우 반복중지 후 다음 반복 수행
+      }
+      output += i
+    }
+    document.write(`0부터 10까지 짝수의 합 구하기 : ${output}`);
+  </script>
+  
+
+  <h4> 중첩 반복문 사용하기1</h4>
+  <script>
+    let output2 = '';
+    for (let i=1; i<=10; i++){
+      for (let j=0; j<i; j++){
+        output2 += '★';
+      }
+      output2 += '<br>'; // '\n'    은 왜 안될까. 
+    }
+    document.write(output2);
+  </script>
+
+
+<h4> 중첩 반복문 사용하기2</h4>
+<script>
+  let output3 = '';
+  for (let i=1; i<=10; i++){
+    for (let j=10; j>i; j--){
+      output3 += '　';      
+    }
+    for (let k=0; k<=2*i-1; k++){
+      output3 += '★';
+    }
+    output3 += '<br>'; // '\n'    은 왜 안될까. 
+  }
+  document.write(output3);
+</script>
+
+</body>
+</html>

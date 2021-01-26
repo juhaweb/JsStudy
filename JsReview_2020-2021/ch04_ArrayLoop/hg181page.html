@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>181page~</title>
+</head>
+<body>
+  <h4>무한 반복문</h4>
+  <script>
+    let m = 0;
+    while(m < 10) {
+      document.write(`<br>${m}번째 반복문 입니다.`);
+      m = m + 1
+    }
+  </script>
+  
+  <h4>while 반복문 기본</h4>
+  <script>
+    let i = 1
+    while(confirm('계속 진행하시겠습니까?')){
+      // 사용자가 '확인'클릭하면 while반복문 계속 진행
+      document.write(`<br>${i}번째 반복문 입니다.`);
+      i += 1
+    }
+  </script>
+
+  <h4>배열과 함께 사용하기</h4>
+  <script>
+    let j = 0;
+    const array = [1,2,3,4,5]
+
+    document.write(`array = [${array}]<br>`);
+
+    while(j<array.length){
+      document.write(`<br>array[${j}] = ${array[j]}`);
+      j ++
+    }
+  </script>
+
+
+</body>
+</html>
