@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>매개변수와 리턴값</title>
+</head>
+<body>
+  <h4>기본형태의 함수 만들기</h4>
+  <script>
+    // 함수 선언
+    function f(x){
+      return x * x
+    }
+
+    // 함수 호출
+    console.log(f(3))
+  </script>
+  
+  <h4>윤년을 확인하는 함수 만들기</h4>
+  <script>
+    function isLeapYear(year){
+      return (year % 4 === 0) && (year % 100 !== 0) || (year % 400 === 0)
+    }
+
+    console.log(`2020년은 윤년일까? ===${isLeapYear(2020)}`);
+    console.log(`2019년은 윤년일까? ===${isLeapYear(2019)}`);
+    console.log(`2018년은 윤년일까? ===${isLeapYear(2018)}`);
+    console.log(`2017년은 윤년일까? ===${isLeapYear(2017)}`);
+  </script>
+
+  <h4>a부터 b까지 더하는 함수</h4>
+  <script>
+    function sumAll(a,b){
+      let output = 0
+      for (let i = a; i <=b; i++){
+        output +=i
+      }
+      return output
+    }
+    document.write(`1부터 100까지의 합 : ${sumAll(1,100)}`);
+    document.write(`1부터 5000까지의 합 : ${sumAll(1,5000)}`);
+    </script>
+
+    <pre>
+      function 함수 (매개변수){
+        let output = 초깃값
+        처리한다
+        return output
+      }
+    </pre>
+
+    <h4>최솟값을 구하는 함수</h4>
+    <script>
+      function min(array){
+        let output = array[0]
+        for (const item of array){
+          // 현재 output보다 더 작은 item이 있다면 
+          if(output > item){
+            // output의 값을 item으로 변경
+            output = item
+          }
+        }
+        return output
+      }
+
+      const testArray = [52,273,32,103,275,24,57]
+      document.write(`${testArray}중에서<br>`);
+      document.write(`최솟값 = ${min(testArray)}`);
+
+</script>
+
+</body>
+</html>
