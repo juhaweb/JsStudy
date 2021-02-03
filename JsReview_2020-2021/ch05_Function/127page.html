@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>함수 기본과 매개변수</title>
+</head>
+<body>
+  <h4>함수 기본과 매개변수</h4>
+  <script>
+
+    function f(x, y, z){
+      document.write(x);
+      document.write(y);
+      document.write(z);
+    }
+
+    // 아무것도 입력을 하지 않은 경우 undefined
+    f();
+    // 많이 입력했을 경우 넘치는것은 사용안함. 
+    f(1,2,3,4,5,6,7,8,9,10);
+
+  </script>
+
+  <h4>Array 3가지</h4>
+  <script>
+    // 1. 빈 array 리턴
+    document.write(Array());
+    // 1. 숫자 길이만큼의 배열 리턴 = 쉼표9개
+    document.write(Array(10));
+    // 1. 아래 요소를 이용해 배열 만들어 리턴
+    document.write(Array(1, 2, 3, 4, 5, 6, 7, 8, 9));
+
+  </script>
+
+  <h4> 가변 인자 함수</h4>
+  
+</body>
+</html>
