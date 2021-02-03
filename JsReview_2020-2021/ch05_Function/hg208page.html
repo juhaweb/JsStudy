@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>나머지 매개변수와 일반 매개변수 조합하기</title>
+</head>
+<body>
+	<h4>나머지 매개변수와 일반 매개변수를 갖는 함수</h4>
+	<script>
+		function sample(a, b, ...c){
+			console.log(a, b, c);
+		}
+
+		sample(1, 2);
+		sample(1, 2, 3);
+		sample(1, 2, 3, 4);
+		
+	</script>
+	
+	<h4>매개변수의 자료형에 따라 다르게 작동하는 min()함수</h4>
+	<script>
+		function min(first, ...rests){
+			// 변수 선언하기
+			let output
+			let items
+
+			// 매개변수의 자료형에 따라 조건 분기하기
+			if (Array.isArray(first)){
+				output = first[0]
+				items = first
+			}else if (typeof(first)==='number'){
+				output = first
+				items = rests
+			}
+
+			// 최솟값 구하기
+			for (const item of items){
+				if (output > item){
+					output = item
+				}
+			}
+			return output
+		}
+
+		document.write(`min(배열):${min([4, 2, 6, 8, 9])}`);
+		document.write(`min(숫자):${min(2, 3, 5, 1, 7, 9)}`);
+
+		</script>
+
+</body>
+</html>
