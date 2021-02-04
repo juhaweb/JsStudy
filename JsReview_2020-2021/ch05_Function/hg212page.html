@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>기본 매개변수</title>
+</head>
+<body>
+  <h4>기본 매개변수</h4>
+  <script>
+
+    function earnings (name, wage=8590, hours=40){
+      document.write(`# ${name}님의 급여 정보`);
+      document.write(`- 시급 : ${wage}원`);
+      document.write(`- 근무 시간 : ${hours}시간`);
+      document.write(`- 급여 : ${wage*hours}원`);
+      document.write(``);
+    }
+
+    earnings('정욱');
+    earnings('상우', 10000);
+    earnings('토토', 10000, 52);
+
+  </script>
+
+
+  <h4>기본 매개변수를 추가한 윤년 함수</h4>
+  <script>
+    function isLeapYear(year=new Date().getFullYear()){
+      document.write(`매개변수 year : ${year} <br>`)
+      return (year %4 === 0 ) && (year%100 !== 0) || (year % 400 === 0)
+    }
+    document.write(`올해는 윤년일까? === ${isLeapYear()}`)
+  </script>
+</body>
+</html>

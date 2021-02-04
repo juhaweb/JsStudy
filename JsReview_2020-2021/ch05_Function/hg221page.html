@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>콜백 함수</title>
+</head>
+<body>
+  <h4>콜백 함수</h4>
+  <script>
+    // 함수를 선언합니다. 
+    function callThreeTimes (callback){
+      for (let i=0; i<3; i++){
+        callback(i)
+      }
+    }
+
+    function print (i){
+      document.write(`${i}번째 함수 호출`);
+    }
+
+    // 함수를 호출합니다. 
+    callThreeTimes(print)
+
+  </script>
+  
+  <h4>콜백 함수 2 : 익명함수 사용하기</h4>
+  <script>
+    callThreeTimes(function(i){
+      document.write(`${i}번째 함수 호출`);
+    })
+  </script>
+
+
+</body>
+</html>
